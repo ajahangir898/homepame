@@ -1,21 +1,29 @@
 .frame {
-  border-radius: 0 0 60px 60px;
+  border-radius: 0 0 120px 120px;
   min-height: 100vh;
   overflow: hidden;
   position: relative;
   width: 100%;
-  background: linear-gradient(179deg, rgba(255, 255, 255, 0.45) 0%, rgba(0, 140, 255, 0.72) 100%);
+  background:
+      url('https://hdnfltv.com/image/nitimages/image__1_.webp') no-repeat center center,
+      url('https://hdnfltv.com/image/nitimages/image_1769105570.webp') no-repeat center center;
+    background-size: cover, cover;
 }
 
-.frame .nature {
+/* Gradient overlay */
+.frame .rectangle-11 {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  mix-blend-mode: hard-light;
-  z-index: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(14, 165, 233, 0.5) 100%);
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  .frame .nature {
+    display: none;
 }
 
 .frame .img {
@@ -36,16 +44,6 @@
   display: none;
 }
 
-.frame .rectangle-11 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(179deg, rgba(255, 255, 255, 0.45) 0%, rgba(0, 140, 255, 0.72) 100%);
-  z-index: 1;
-}
-
 /* Navigation */
 .frame .navigation {
   position: fixed;
@@ -53,37 +51,37 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  background: linear-gradient(180deg, rgba(220, 235, 250, 0.95) 0%, rgba(240, 248, 255, 0.9) 100%);
+  background: linear-gradient(180deg, rgba(220, 238, 255, 0.95) 0%, rgba(235, 245, 255, 0.9) 100%);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
 }
 
 .frame .div-2 {
-  max-width: 1400px;
+  max-width: 1440px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 40px;
+  padding: 24px 40px;
   position: relative;
 }
 
 .frame .img-2 {
-  height: 50px;
+  height: 56px;
   width: auto;
 }
 
 .frame .menus {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
 }
 
 .frame .menu {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 2px;
   padding: 8px 16px;
   border-radius: 8px;
   cursor: pointer;
@@ -91,15 +89,16 @@
 }
 
 .frame .menu:hover {
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(0, 0, 0, 0.03);
 }
 
 .frame .text-wrapper-4 {
-  color: #131316;
+  color: #171717;
   font-family: "Poppins", Helvetica;
   font-size: 16px;
   font-weight: 500;
   white-space: nowrap;
+  line-height: 24px;
 }
 
 .frame .expand-more {
@@ -110,7 +109,7 @@
 .frame .buttons-2 {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 4px;
 }
 
 .frame .button-3 {
@@ -118,23 +117,24 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 20px;
-  border-radius: 50px;
+  padding: 12px 24px;
+    border-radius: 99px;
   cursor: pointer;
   transition: all 0.3s ease;
-  color: #ff6b01;
+  color: #f97316;
   font-family: "Poppins", Helvetica;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
+  line-height: 24px;
 }
 
 .frame .button-3:hover {
-  background: rgba(255, 107, 1, 0.05);
+  background: rgba(249, 115, 22, 0.05);
 }
 
 .frame .carbon-language {
-  width: 24px;
-  height: 24px;
+  width: 32px;
+    height: 32px;
 }
 
 /* Hero Content */
@@ -156,7 +156,7 @@
 }
 
 .frame .from-idea-to-online {
-  color: #ff9c1b;
+  color: #f59e0b;
   font-family: "Poppins", Helvetica;
   font-size: 16px;
   font-weight: 500;
@@ -169,29 +169,29 @@
   width: 100%;
   max-width: 1173px;
   font-family: "Poppins", Helvetica;
-  font-size: 69px;
+  font-size: 72px;
   font-style: normal;
   font-weight: 600;
   line-height: 72px;
-  letter-spacing: -2.76px;
+  letter-spacing: 0;
   text-align: center;
   margin: 0 0 16px 0;
 }
 
 .frame .hero-title-dark {
-  color: #131316;
+  color: #171717;
 }
 
 .frame .hero-title-orange {
-  color: #FF6B01;
+  color: #f59e0b;
 }
 
 .frame .text-wrapper {
-  color: #383942;
+  color: #3f3f46;
   font-family: "Poppins", Helvetica;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
-  line-height: 1.6;
+  line-height: 24px;
   max-width: 100%;
   margin: 0 auto 20px;
   white-space: nowrap;
@@ -219,16 +219,17 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 14px 28px;
-  background: linear-gradient(98deg, #ff6b01 0%, #ff9f1c 100%);
-  border-radius: 50px;
+  padding: 12px 24px;
+    background: linear-gradient(135deg, #f97316 0%, #f59e0b 100%);
+    border-radius: 88px;
   cursor: pointer;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .frame .button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 107, 1, 0.4);
+  box-shadow: 0 6px 20px rgba(249, 115, 22, 0.4);
 }
 
 .frame .text-wrapper-2 {
@@ -236,6 +237,7 @@
   font-family: "Roboto", Helvetica;
   font-size: 16px;
   font-weight: 500;
+  line-height: 24px;
   white-space: nowrap;
 }
 
@@ -244,7 +246,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 12px 24px;
+  padding: 8px 24px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -254,16 +256,22 @@
 }
 
 .frame .text-wrapper-3 {
-  color: #ff6f03;
+  color: #f97316;
   font-family: "Poppins", Helvetica;
   font-size: 16px;
   font-weight: 500;
+  line-height: 24px;
   white-space: nowrap;
 }
 
 .frame .icon {
-  width: 28px;
-  height: 28px;
+  width: 32px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 99px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Hero Image */
@@ -342,6 +350,21 @@
     padding-bottom: 40px;
   }
   
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                /* Scale down decorative effects on tablets */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                .frame::before,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                .frame::after {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  width: 300px;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  height: 300px;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  opacity: 0.7;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                .frame::before {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  left: -120px;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                .frame::after {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  right: -120px;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                }
   .frame .navigation {
     padding: 0;
   }
@@ -445,4 +468,19 @@
     width: 24px;
     height: 24px;
   }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                /* Hide decorative effects on very small screens */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                .frame::before,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                .frame::after {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  width: 200px;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  height: 200px;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  opacity: 0.5;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                .frame::before {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  left: -100px;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                .frame::after {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  right: -100px;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                }
 }

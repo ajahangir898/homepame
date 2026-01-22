@@ -7,7 +7,7 @@
 /* Services Section */
 .services-section {
   max-width: 1200px;
-  margin: 0 auto 100px;
+  margin: 0 auto 30px;
 }
 
 .section-header {
@@ -44,7 +44,7 @@
   background: #ffffff;
   border-radius: 20px;
   padding: 30px 25px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0 0;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -141,7 +141,7 @@
 .how-it-works-section {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 80px 20px;
+  padding: 30px 20px 30px 20px;
 }
 
 .section-title.centered {
@@ -320,6 +320,50 @@
   color: #666;
 }
 
+/* Shop Pricing Section */
+.shop-pricing-section {
+  position: relative;
+  max-width: 1400px;
+  margin: 60px auto;
+  padding: 20px;
+  min-height: 750px;
+}
+
+.shop-pricing-section .div-wrapper,
+.shop-pricing-section .div {
+  position: absolute;
+}
+
+.shop-pricing-section .div-wrapper {
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+}
+
+.shop-pricing-section .div {
+  left: 50%;
+  transform: translateX(-50%);
+  top: 360px;
+}
+
+@media (max-width: 768px) {
+  .shop-pricing-section {
+    min-height: auto;
+    padding: 20px 10px;
+  }
+
+  .shop-pricing-section .div-wrapper,
+  .shop-pricing-section .div {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+}
 /* Responsive Styles */
 @media (max-width: 1200px) {
   .services-grid {

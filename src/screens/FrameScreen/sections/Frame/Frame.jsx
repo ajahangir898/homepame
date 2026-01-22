@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useState, memo } from "react";
 import { BookingModal } from "../../../../components/BookingModal/BookingModal";
 import "./style.css";
 
-export const Frame = () => {
+// Memoized component for better performance
+export const Frame = memo(() => {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
 
   const openBooking = () => setIsBookingOpen(true);
@@ -16,12 +17,17 @@ export const Frame = () => {
         className="nature"
         alt="Nature"
         src="https://c.animaapp.com/6PVGKTMi/img/nature-17.png"
+        loading="eager"
+        decoding="async"
+        fetchpriority="high"
       />
 
       <img
         className="img"
         alt="Group"
         src="https://c.animaapp.com/6PVGKTMi/img/group-890.png"
+        loading="lazy"
+        decoding="async"
       />
 
       <div className="rectangle" />
@@ -131,7 +137,7 @@ export const Frame = () => {
                 src="https://c.animaapp.com/6PVGKTMi/img/carbon-language.svg"
               />
 
-              <div className="text-wrapper-3">বল</div>
+              <div className="text-wrapper-3">বাংলা</div>
             </button>
 
             <button className="button-3">
@@ -148,8 +154,12 @@ export const Frame = () => {
       <img
         className="element"
         alt="Element"
-        src="https://c.animaapp.com/6PVGKTMi/img/6-6.png"
+        src="https://i.postimg.cc/NMTtd5tB/6-6.png"
+        loading="lazy"
+        decoding="async"
       />
     </div>
   );
-};
+});
+
+Frame.displayName = "Frame";

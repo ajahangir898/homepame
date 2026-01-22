@@ -1,0 +1,235 @@
+.empowering-tech-section {
+  padding: 60px 20px;
+  background: linear-gradient(180deg, rgba(236, 252, 203, 0.6) 0%, rgba(217, 249, 157, 0.4) 50%, rgba(255, 255, 255, 0.6) 100%);
+  border-radius: 80px 80px 0 0;
+  box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.empowering-tech-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header Section */
+.empowering-tech-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.empowering-tech-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #002D5A;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.empowering-tech-title {
+  font-size: clamp(28px, 5vw, 42px);
+  font-weight: 700;
+  margin: 12px 0;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.15;
+}
+
+.text-lime {
+  color: #1a2e05;
+}
+
+.text-orange {
+  color: #f97316;
+}
+
+.text-sky {
+  color: #38bdf8;
+}
+
+.empowering-tech-subtitle {
+  font-size: 15px;
+  color: #002D5A;
+  font-family: 'Inter', sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Marketing Cards Grid */
+.marketing-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Marketing Card */
+.marketing-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 24px 28px;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.marketing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.marketing-card-header {
+  margin-bottom: 16px;
+}
+
+.marketing-card-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #27272a;
+  margin: 0 0 4px 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.marketing-card-subtitle {
+  font-size: 13px;
+  color: #52525b;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Features */
+.marketing-card-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+
+.marketing-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  color: #52525b;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.4;
+}
+
+.marketing-radio-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  background: #fff;
+  flex-shrink: 0;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.marketing-radio-filled {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+/* Buttons */
+.marketing-card-btn {
+  width: 100%;
+  padding: 12px 48px;
+  border-radius: 69px;
+  font-size: var(--fs-sm, 14px);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(--font-body, 'Inter', sans-serif);
+  text-align: center;
+  margin-top: 24px;
+}
+
+.marketing-card-btn-green {
+  background: #15803d;
+  border: 1px solid #15803d;
+  color: #ffffff;
+}
+
+.marketing-card-btn-green:hover {
+  background: #166534;
+  border-color: #166534;
+}
+
+.marketing-card-btn-orange {
+  background: transparent;
+  border: 1px solid #f97316;
+  color: #f97316;
+}
+
+.marketing-card-btn-orange:hover {
+  background: #f97316;
+  color: #ffffff;
+}
+
+.marketing-card-btn-blue {
+  background: transparent;
+  border: 1px solid #2563eb;
+  color: #2563eb;
+}
+
+.marketing-card-btn-blue:hover {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .marketing-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  
+  .marketing-card:last-child {
+    grid-column: span 2;
+    max-width: 50%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .marketing-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .marketing-card:last-child {
+    grid-column: span 1;
+    max-width: 100%;
+  }
+  
+  .empowering-tech-section {
+    padding: 50px 16px;
+    border-radius: 40px 40px 0 0;
+  }
+  
+  .empowering-tech-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .marketing-card {
+    padding: 20px;
+    border-radius: 16px;
+  }
+  
+  .marketing-card-title {
+    font-size: 18px;
+  }
+  
+  .marketing-card-btn {
+    padding: 12px 24px;
+  }
+}

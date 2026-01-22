@@ -1,7 +1,48 @@
+import { memo, useMemo } from "react";
+import { CreateYourShop } from "../CreateYourShop";
 import "./style.css";
 
-export const FrameWrapper = () => {
-  const services = [
+// Memoized Service Card for better performance
+const ServiceCard = memo(({ service }) => (
+  <div className="service-card">
+    <div className="service-icon">
+      <img 
+        src={service.icon} 
+        alt={service.title} 
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+    <h3 className="service-title">{service.title}</h3>
+    <p className="service-tech">{service.tech}</p>
+    <p className="service-description">{service.description}</p>
+  </div>
+));
+
+ServiceCard.displayName = "ServiceCard";
+
+// Memoized Step Card for better performance
+const StepCard = memo(({ step, index }) => (
+  <div className={`step-card step-card-${index + 1}`}>
+    <div className={`step-icon step-icon-${index + 1}`}>
+      <img 
+        src={step.icon} 
+        alt={step.title} 
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+    <h3 className="step-title">{step.title}</h3>
+    <p className="step-description">{step.description}</p>
+    <div className={`step-decoration step-decoration-${index + 1}`}></div>
+  </div>
+));
+
+StepCard.displayName = "StepCard";
+
+export const FrameWrapper = memo(() => {
+  // Memoize static data
+  const services = useMemo(() => [
     {
       id: 1,
       title: "Web",
@@ -58,25 +99,28 @@ export const FrameWrapper = () => {
       description: "24/7 support to keep your apps secure, updated, and running smoothly.",
       icon: "https://c.animaapp.com/6PVGKTMi/img/puzzle.svg",
     },
-  ];
+  ], []);
 
-  const steps = [
+  const steps = useMemo(() => [
     {
       id: 1,
       title: "Define the problem",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      icon: "https://hdnfltv.com/image/nitimages/Search.webp",
     },
     {
       id: 2,
       title: "Develop a Solution",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      icon: "https://hdnfltv.com/image/nitimages/Group.webp",
     },
     {
       id: 3,
       title: "Refine",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      icon: "https://hdnfltv.com/image/nitimages/Group__1_.webp",
     },
-  ];
+  ], []);
 
   return (
     <div className="frame-wrapper">
@@ -91,14 +135,7 @@ export const FrameWrapper = () => {
 
         <div className="services-grid">
           {services.map((service) => (
-            <div key={service.id} className="service-card">
-              <div className="service-icon">
-                <img src={service.icon} alt={service.title} />
-              </div>
-              <h3 className="service-title">{service.title}</h3>
-              <p className="service-tech">{service.tech}</p>
-              <p className="service-description">{service.description}</p>
-            </div>
+            <ServiceCard key={service.id} service={service} />
           ))}
         </div>
 
@@ -109,48 +146,8 @@ export const FrameWrapper = () => {
           </svg>
         </button>
       </section>
-
-      {/* How it Works Section */}
-      <section className="how-it-works-section">
-        <h2 className="section-title centered">How it Works</h2>
-
-        <div className="steps-container">
-          <div className="step-card step-card-1">
-            <div className="step-icon step-icon-1">
-              <img src="https://hdnfltv.com/image/nitimages/Search.webp" alt="Define Problem" />
-            </div>
-            <h3 className="step-title">Define the problem</h3>
-            <p className="step-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
-            <div className="step-decoration step-decoration-1"></div>
-          </div>
-          
-          <div className="step-card step-card-2">
-            <div className="step-icon step-icon-2">
-              <img src="https://hdnfltv.com/image/nitimages/Group.webp" alt="Develop a Solution" />
-            </div>
-            <h3 className="step-title">Develop a Solution</h3>
-            <p className="step-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
-            <div className="step-decoration step-decoration-2"></div>
-          </div>
-          
-          <div className="step-card step-card-3">
-            <div className="step-icon step-icon-3">
-              <img src="https://hdnfltv.com/image/nitimages/Group__1_.webp" alt="Refine" />
-            </div>
-            <h3 className="step-title">Refine</h3>
-            <p className="step-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
-            <div className="step-decoration step-decoration-3"></div>
-          </div>
-        </div>
-
-        <button className="learn-more-btn centered">
-          Learn more
-          <svg className="arrow-circle" viewBox="0 0 24 24" fill="none">
-            <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1.5"/>
-            <path d="M10 8l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-        </button>
-      </section>
     </div>
   );
-};
+});
+
+FrameWrapper.displayName = "FrameWrapper";

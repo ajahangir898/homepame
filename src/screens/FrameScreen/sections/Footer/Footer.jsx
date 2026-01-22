@@ -1,73 +1,90 @@
+import { useState } from "react";
 import "./style.css";
 
 export const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState({ type: "", message: "" });
+
+  const handleSubscribe = (e) => {
+    e.preventDefault();
+    if (!email.trim()) {
+      setStatus({ type: "error", message: "Please enter your email" });
+      return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setStatus({ type: "error", message: "Please enter a valid email" });
+      return;
+    }
+    setStatus({ type: "success", message: "Thanks for subscribing!" });
+    setEmail("");
+    setTimeout(() => setStatus({ type: "", message: "" }), 3000);
+  };
+
   return (
     <footer className="footer">
-      <div className="group-23">
-        <img
-          className="group-24"
-          alt="Group"
-          src="https://c.animaapp.com/6PVGKTMi/img/group-2036@2x.png"
-        />
-
-        <div className="group-25">
-          <div className="group-26">
-            <div className="text-wrapper-33">Company</div>
-
-            <div className="text-wrapper-34">About</div>
-
-            <div className="text-wrapper-35">Contact</div>
-
-            <div className="text-wrapper-36">Blogs</div>
+      <div className="footer-divider"></div>
+      <div className="footer-container">
+        <div className="footer-content">
+          {/* Logo Section */}
+          <div className="footer-logo">
+            <img
+              src="https://c.animaapp.com/6PVGKTMi/img/group-2036@2x.png"
+              alt="System Next IT"
+            />
           </div>
 
-          <div className="group-27">
-            <div className="text-wrapper-37">Quick Links</div>
+          {/* Links Section */}
+          <div className="footer-links">
+            <div className="footer-column">
+              <h4 className="footer-title">Company</h4>
+              <a href="#" className="footer-link">About</a>
+              <a href="#contact" className="footer-link">Contact</a>
+              <a href="#" className="footer-link">Blogs</a>
+            </div>
 
-            <div className="text-wrapper-38">Downloads</div>
+            <div className="footer-column">
+              <h4 className="footer-title">Legal</h4>
+              <a href="#" className="footer-link">Privacy Policy</a>
+              <a href="#" className="footer-link">Terms & Services</a>
+              <a href="#" className="footer-link">Terms of Use</a>
+              <a href="#" className="footer-link">Refund Policy</a>
+            </div>
 
-            <div className="text-wrapper-39">Forum</div>
+            <div className="footer-column">
+              <h4 className="footer-title">Quick Links</h4>
+              <a href="#" className="footer-link">Forum</a>
+              <a href="#" className="footer-link">Downloads</a>
+            </div>
           </div>
 
-          <div className="group-28">
-            <div className="text-wrapper-40">Legal</div>
-
-            <div className="text-wrapper-41">Privacy Policy</div>
-
-            <div className="terms-services">Terms &amp; Services</div>
-
-            <div className="text-wrapper-42">Terms of Use</div>
-
-            <div className="text-wrapper-43">Refund Policy</div>
+          {/* Newsletter Section */}
+          <div className="footer-newsletter">
+            <h4 className="newsletter-title">Join Our Newsletter</h4>
+            <form className="newsletter-form" onSubmit={handleSubscribe}>
+              <input
+                type="email"
+                className="newsletter-input"
+                placeholder="Your email address"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <button type="submit" className="newsletter-btn">
+                Subscribe
+              </button>
+            </form>
+            <p className="newsletter-text">
+              * Will send you weekly updates for your better tool management.
+            </p>
+            {status.message && (
+              <p className={`${status.type}-message`}>{status.message}</p>
+            )}
           </div>
         </div>
 
-        <img
-          className="vector-9"
-          alt="Vector"
-          src="https://c.animaapp.com/6PVGKTMi/img/vector-10.svg"
-        />
-
-        <div className="rectangle-22" />
-
-        <div className="text-wrapper-44">Join Our Newsletter</div>
-
-        <p className="will-send-you-weekly">
-          *&nbsp;&nbsp;Will send you weekly updates for your better tool
-          management.
-        </p>
-
-        <div className="rectangle-23" />
-
-        <div className="text-wrapper-45">Your email address</div>
-
-        <img
-          className="rectangle-24"
-          alt="Rectangle"
-          src="https://c.animaapp.com/6PVGKTMi/img/rectangle-128.svg"
-        />
-
-        <div className="text-wrapper-46">Subscribe</div>
+        {/* Copyright Section */}
+        <div className="footer-bottom">
+          <p>© 2026 SystemNext IT. All rights reserved.</p>
+        </div>
       </div>
     </footer>
   );

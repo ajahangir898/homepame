@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SystemNextIT - Complete Digital Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&family=Inter:wght@400;500;600;700&family=Questrial&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                        roboto: ['Roboto', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                        questrial: ['Questrial', 'sans-serif'],
+                        manrope: ['Manrope', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-stripe {
+            background: linear-gradient(to left, rgba(255,255,255,0), rgba(0,0,0,0.2), rgba(255,255,255,0));
+            backdrop-filter: blur(107px);
+        }
+    </style>
+</head>
+<body class="bg-white font-poppins">
+    <!-- Hero Section -->
+    <section class="relative w-full min-h-[950px] rounded-b-[120px] overflow-hidden">
+        <!-- Background Image -->
+        <img class="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-hard-light" src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=1440&h=949&fit=crop" alt="Background" />
+        
+        <!-- Glass Stripes Effect -->
+        <div class="absolute inset-0 flex">
+            <div class="w-16 h-full glass-stripe"></div>
+            <div class="w-16 h-full glass-stripe ml-1"></div>
+            <div class="w-16 h-full glass-stripe ml-1"></div>
+            <div class="w-16 h-full glass-stripe ml-1"></div>
+            <div class="w-16 h-full glass-stripe ml-1"></div>
+            <div class="w-16 h-full glass-stripe ml-1"></div>
+            <div class="w-16 h-full glass-stripe ml-1"></div>
+            <div class="w-16 h-full glass-stripe ml-1"></div>
+            <div class="w-16 h-full glass-stripe ml-1"></div>
+            <div class="w-16 h-full glass-stripe ml-1"></div>
+            <div class="w-16 h-full glass-stripe ml-1"></div>
+            <div class="w-16 h-full glass-stripe ml-1"></div>
+            <div class="w-16 h-full glass-stripe ml-1"></div>
+            <div class="w-16 h-full glass-stripe ml-1"></div>
+            <div class="w-16 h-full glass-stripe ml-1"></div>
+            <div class="w-16 h-full glass-stripe ml-1"></div>
+            <div class="w-16 h-full glass-stripe ml-1"></div>
+            <div class="w-16 h-full glass-stripe ml-1"></div>
+            <div class="w-16 h-full glass-stripe ml-1"></div>
+            <div class="w-16 h-full glass-stripe ml-1"></div>
+            <div class="w-16 h-full glass-stripe ml-1"></div>
+            <div class="w-16 h-full glass-stripe ml-1"></div>
+        </div>
+        
+        <!-- Gradient Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-b from-white/40 to-sky-500/70"></div>
+        
+        <!-- Navigation -->
+        <nav class="absolute top-0 left-0 right-0 h-24 bg-white/5 backdrop-blur-sm z-50">
+            <div class="max-w-7xl mx-auto px-10 h-full flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="w-64 h-14">
+                        <div class="h-6 w-48 bg-gradient-to-r from-sky-400 to-blue-500"></div>
+                        <div class="h-2 w-48 bg-black mt-1"></div>
+                    </div>
+                </div>
+                
+                <!-- Nav Links -->
+                <div class="flex items-center gap-2">
+                    <a href="#" class="px-4 py-2 text-neutral-900 text-base font-medium hover:bg-white/10 rounded-lg flex items-center gap-0.5">
+                        Services
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+                    </a>
+                    <a href="#" class="px-4 py-2 text-neutral-900 text-base font-medium hover:bg-white/10 rounded-lg">SaaS</a>
+                    <a href="#" class="px-4 py-2 text-neutral-900 text-base font-medium hover:bg-white/10 rounded-lg">Websites</a>
+                    <a href="#" class="px-4 py-2 text-neutral-900 text-base font-medium hover:bg-white/10 rounded-lg">Marketing</a>
+                    <a href="#" class="px-4 py-2 text-neutral-900 text-base font-medium hover:bg-white/10 rounded-lg">Tools</a>
+                    <a href="#" class="px-4 py-2 text-neutral-900 text-base font-medium hover:bg-white/10 rounded-lg">Contact us</a>
+                </div>
+                
+                <!-- Right Actions -->
+                <div class="flex items-center gap-1">
+                    <button class="px-6 py-3 text-orange-500 text-base font-medium flex items-center gap-2">
+                        <span class="w-8 h-8">🇧🇩</span>
+                        বাংলা
+                    </button>
+                    <a href="#" class="px-6 py-3 text-orange-500 text-base font-medium">Sign in</a>
+                    <button class="px-6 py-3 bg-gradient-to-br from-orange-500 to-amber-500 rounded-full text-white text-base font-medium font-roboto">
+                        Book a Call
+                    </button>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Hero Content -->
+        <div class="relative z-10 max-w-5xl mx-auto pt-48 text-center">
+            <p class="text-amber-500 text-base font-medium uppercase tracking-wide mb-7">From idea to online success</p>
+            <h1 class="text-7xl font-semibold leading-tight mb-8">
+                <span class="text-neutral-900">Complete Digital </span>
+                <span class="text-amber-500">Solutions</span>
+            </h1>
+            <p class="text-zinc-700 text-base font-medium leading-6 max-w-2xl mx-auto mb-8">
+                Accelerate your business growth with modern, scalable, and result-driven digital solutions.
+            </p>
+            
+            <!-- CTA Buttons -->
+            <div class="flex items-center justify-center gap-1">
+                <button class="px-6 py-3 bg-gradient-to-br from-orange-500 to-amber-500 rounded-full shadow-lg text-white text-base font-medium font-roboto">
+                    Book a Call
+                </button>
+                <button class="px-6 py-2 flex items-center gap-2 text-orange-500 text-base font-medium">
+                    How it works
+                    <span class="w-8 h-8 bg-white/80 rounded-full flex items-center justify-center">
+                        <svg class="w-4 h-4 text-orange-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"/></svg>
+                    </span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Dashboard Preview Image -->
+        <div class="relative z-10 mt-8 flex justify-center">
+            <img class="w-[900px] h-auto rounded-lg shadow-2xl" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&h=459&fit=crop" alt="Dashboard Preview" />
+        </div>
+    </section>
+
+    <!-- Services & Technologies Section -->
+    <section class="relative -mt-24 mx-20 bg-white rounded-[100px] overflow-hidden py-24 px-12">
+        <div class="text-center mb-16">
+            <h2 class="text-black text-6xl font-medium font-roboto mb-4">Services & Technologies</h2>
+            <p class="text-neutral-600 text-lg font-medium leading-7">Innovative web development and digital marketing strategies to scale your business.</p>
+        </div>
+        
+        <!-- Services Grid -->
+        <div class="grid grid-cols-4 gap-8 mb-16">
+            <!-- Web -->
+            <div class="relative">
+                <div class="absolute -top-4 left-0 w-72 h-80 bg-gray-300 rounded-[40px] blur-[20px]"></div>
+                <div class="relative bg-white p-6">
+                    <div class="w-72 h-[3px] bg-orange-500 rounded-full mb-6"></div>
+                    <div class="w-16 h-16 bg-gradient-to-br from-sky-500 to-blue-600 rounded-full shadow-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/></svg>
+                    </div>
+                    <h3 class="text-black text-2xl font-medium font-roboto mb-4">Web</h3>
+                    <p class="text-neutral-600 text-base">
+                        <span class="font-medium">Next.js, React.js</span> Professional web development using modern frameworks like Next.js and React.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- E-commerce -->
+            <div class="p-6">
+                <div class="w-16 h-16 bg-gradient-to-br from-indigo-400 to-indigo-600 rounded-full shadow-lg flex items-center justify-center mb-6">
+                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/></svg>
+                </div>
+                <h3 class="text-black text-2xl font-medium font-roboto mb-4">E-commerce</h3>
+                <p class="text-neutral-600 text-base">
+                    <span class="font-medium">Powerful, Scalable</span><br><br>
+                    Secure eCommerce stores with smooth checkout and high conversions.
+                </p>
+            </div>
+            
+            <!-- App -->
+            <div class="p-6">
+                <div class="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-500 rounded-full shadow-lg flex items-center justify-center mb-6">
+                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z"/></svg>
+                </div>
+                <h3 class="text-black text-2xl font-medium font-roboto mb-4">App</h3>
+                <p class="text-neutral-600 text-base">
+                    <span class="font-medium">React Native, Flutter</span><br><br>
+                    Build cross-platform mobile apps with smooth performance.
+                </p>
+            </div>
+            
+            <!-- SaaS -->
+            <div class="p-6">
+                <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full shadow-lg flex items-center justify-center mb-6">
+                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M5.5 16a3.5 3.5 0 01-.369-6.98 4 4 0 117.753-1.977A4.5 4.5 0 1113.5 16h-8z"/></svg>
+                </div>
+                <h3 class="text-black text-2xl font-medium font-roboto mb-4">SaaS</h3>
+                <p class="text-neutral-600 text-base">
+                    <span class="font-medium">Software as a Service</span><br><br>
+                    Create professional E-commerce websites instantly without any coding.
+                </p>
+            </div>
+            
+            <!-- Brand Identity -->
+            <div class="p-6">
+                <div class="w-16 h-16 bg-gradient-to-br from-violet-700 to-fuchsia-700 rounded-full shadow-lg flex items-center justify-center mb-6">
+                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-1.757l4.9-4.9a2 2 0 000-2.828L13.485 5.1a2 2 0 00-2.828 0L10 5.757v8.486zM16 18H9.071l6-6H16a2 2 0 012 2v2a2 2 0 01-2 2z" clip-rule="evenodd"/></svg>
+                </div>
+                <h3 class="text-black text-2xl font-medium font-roboto mb-4">Brand Identity</h3>
+                <p class="text-neutral-600 text-base">
+                    <span class="font-medium">Logo, Style Guide, Assets</span> Creating a unique brand voice and visual identity that stands out.
+                </p>
+            </div>
+            
+            <!-- Social Media -->
+            <div class="p-6">
+                <div class="w-16 h-16 bg-gradient-to-b from-emerald-400 to-emerald-600 rounded-full shadow-lg flex items-center justify-center mb-6">
+                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"/><path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"/></svg>
+                </div>
+                <h3 class="text-black text-2xl font-medium font-roboto mb-4">Social Media</h3>
+                <p class="text-neutral-600 text-base">
+                    <span class="font-medium">SEO, Digital Marketing</span><br><br>
+                    Grow your presence with strategic SEO and marketing campaigns.
+                </p>
+            </div>
+            
+            <!-- Interface Design -->
+            <div class="p-6">
+                <div class="w-16 h-16 bg-gradient-to-b from-pink-600 to-pink-600 rounded-full shadow-lg flex items-center justify-center mb-6">
+                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"/></svg>
+                </div>
+                <h3 class="text-black text-2xl font-medium font-roboto mb-4">Interface Design</h3>
+                <p class="text-neutral-600 text-base">
+                    <span class="font-medium">UI/UX, Figma</span><br><br>
+                    Engaging and intuitive interface design for better user experience.
+                </p>
+            </div>
+            
+            <!-- Maintenance -->
+            <div class="p-6">
+                <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-green-700 rounded-full shadow-lg flex items-center justify-center mb-6">
+                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/></svg>
+                </div>
+                <h3 class="text-black text-2xl font-medium font-roboto mb-4">Maintenance</h3>
+                <p class="text-neutral-600 text-base">
+                    <span class="font-medium">Security, Updates, Logs</span><br><br>
+                    24/7 support to keep your apps secure, updated, and running smoothly.
+                </p>
+            </div>
+        </div>
+        
+        <!-- CTA Button -->
+        <div class="text-center">
+            <button class="px-6 py-3 bg-gradient-to-br from-orange-500 to-amber-500 rounded-full shadow-lg text-white text-base font-medium font-roboto">
+                Request for Meeting
+            </button>
+        </div>
+    </section>
+
+    <!-- SaaS Pricing Section -->
+    <section class="relative mt-16 bg-white/70 rounded-t-[100px] shadow-2xl overflow-hidden py-24 px-20">
+        <div class="text-center mb-16">
+            <p class="text-orange-950 text-sm font-medium font-inter mb-2">Create Your Shop</p>
+            <h2 class="text-5xl font-semibold mb-4">
+                <span class="text-orange-950">Go </span>
+                <span class="text-orange-600">digital</span>
+                <span class="text-orange-950"> for free: Start your </span>
+                <span class="text-sky-400">shop</span>
+            </h2>
+            <p class="text-orange-950 text-base font-roboto">Smart automation and Ready-to-launch business websites</p>
+        </div>
+        
+        <!-- Pricing Cards Grid -->
+        <div class="grid grid-cols-2 gap-6">
+            <!-- Startup -->
+            <div class="bg-white rounded-3xl border p-10 relative overflow-hidden">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <h3 class="text-zinc-800 text-2xl font-bold font-inter">Startup</h3>
+                        <p class="text-zinc-800 text-sm font-questrial">Hands-free hosting & updates.</p>
+                    </div>
+                    <div>
+                        <span class="text-zinc-800 text-3xl font-bold">৳300</span>
+                        <span class="text-zinc-800 text-sm font-medium font-inter">/Month</span>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-x-9 gap-y-3">
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 bg-green-700 rounded-sm"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Free Sub-Domain & Hosting</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 bg-green-700 rounded-sm"></div>
+                        <span class="text-zinc-700 text-base font-questrial">SSL & Security</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 bg-green-700 rounded-sm"></div>
+                        <span class="text-zinc-700 text-base font-questrial">User Friendly Dashboard</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 bg-green-700 rounded-sm"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Mobile First Approach</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 bg-green-700 rounded-sm"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Unlimited Product Upload</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 bg-green-700 rounded-sm"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Customizable Theme</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 bg-green-700 rounded-sm"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Live Chat Support</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 bg-green-700 rounded-sm"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Next.js Performance</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 bg-green-700 rounded-sm"></div>
+                        <div>
+                            <span class="text-zinc-700 text-base font-questrial">Initial Load Time 0.2 sec</span>
+                            <span class="text-zinc-700 text-xs font-questrial block">(no reload time)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 flex justify-end">
+                    <button class="w-64 h-10 rounded-full border-2 border-green-700 text-green-700 text-sm font-bold font-inter">
+                        SUBSCRIBE NOW
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Enterprise -->
+            <div class="bg-white rounded-3xl border p-10">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <h3 class="text-black text-2xl font-bold font-inter">Enterprise</h3>
+                        <p class="text-zinc-800 text-sm font-questrial">Hands-free hosting & updates.</p>
+                    </div>
+                    <div>
+                        <span class="text-zinc-800 text-3xl font-bold">৳600</span>
+                        <span class="text-zinc-800 text-sm font-medium font-inter">/Month</span>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-x-9 gap-y-3">
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 bg-gradient-to-r from-blue-500 rounded-sm"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Free Sub-Domain & Hosting</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 bg-gradient-to-r from-blue-500 rounded-sm"></div>
+                        <span class="text-zinc-700 text-base font-questrial">SSL & Security</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 bg-gradient-to-r from-blue-500 rounded-sm"></div>
+                        <span class="text-zinc-700 text-base font-questrial">User Friendly Dashboard</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 bg-gradient-to-r from-blue-500 rounded-sm"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Mobile First Approach</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 bg-gradient-to-r from-blue-500 rounded-sm"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Unlimited Product Upload</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 bg-gradient-to-r from-blue-500 rounded-sm"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Customizable Theme</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 bg-gradient-to-r from-blue-500 rounded-sm"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Live Chat Support</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 bg-gradient-to-r from-blue-500 rounded-sm"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Business Report</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 bg-gradient-to-r from-blue-500 rounded-sm"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Next.js Performance</span>
+                    </div>
+                </div>
+                <div class="mt-8 flex justify-end">
+                    <button class="w-64 h-10 rounded-full border-2 border-blue-500 text-blue-500 text-sm font-bold font-inter">
+                        SUBSCRIBE NOW
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Advanced -->
+            <div class="bg-white rounded-3xl border p-10">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <h3 class="text-zinc-800 text-2xl font-bold font-inter">Advanced</h3>
+                        <p class="text-zinc-800 text-sm font-questrial">Hands-free hosting & updates.</p>
+                    </div>
+                    <div>
+                        <span class="text-zinc-800 text-3xl font-bold">৳900</span>
+                        <span class="text-zinc-800 text-sm font-medium font-inter">/Month</span>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-x-9 gap-y-3">
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 bg-orange-500 rounded-sm"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Free Sub-Domain & Hosting</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 bg-orange-500 rounded-sm"></div>
+                        <span class="text-zinc-700 text-base font-questrial">SSL & Security</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 bg-orange-500 rounded-sm"></div>
+                        <span class="text-zinc-700 text-base font-questrial">User Friendly Dashboard</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 bg-orange-500 rounded-sm"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Mobile First Approach</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 bg-orange-500 rounded-sm"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Unlimited Product Upload</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 bg-orange-500 rounded-sm"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Customizable Theme</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 bg-orange-500 rounded-sm"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Live Chat Support</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 bg-orange-500 rounded-sm"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Business Report</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 bg-orange-500 rounded-sm"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Next.js Performance</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 bg-orange-500 rounded-sm"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Theme Customization Request</span>
+                    </div>
+                </div>
+                <div class="mt-8 flex justify-end">
+                    <button class="w-64 h-10 rounded-full border-2 border-orange-500 text-orange-500 text-sm font-bold font-inter">
+                        SUBSCRIBE NOW
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Premium -->
+            <div class="bg-white rounded-3xl border p-10">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <h3 class="text-zinc-800 text-2xl font-bold font-inter">Premium</h3>
+                        <p class="text-zinc-800 text-sm font-questrial">Hands-free hosting & updates.</p>
+                    </div>
+                    <div>
+                        <span class="text-zinc-800 text-3xl font-bold">৳1200</span>
+                        <span class="text-zinc-800 text-sm font-medium font-inter">/Month</span>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-x-9 gap-y-3">
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 bg-blue-600 rounded-sm"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Free Sub-Domain & Hosting</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 bg-blue-600 rounded-sm"></div>
+                        <span class="text-zinc-700 text-base font-questrial">SSL & Security</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 bg-blue-600 rounded-sm"></div>
+                        <span class="text-zinc-700 text-base font-questrial">User Friendly Dashboard</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 bg-blue-600 rounded-sm"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Mobile First Approach</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 bg-blue-600 rounded-sm"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Unlimited Product Upload</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 bg-blue-600 rounded-sm"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Customizable Theme</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 bg-blue-600 rounded-sm"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Live Chat Support</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 bg-blue-600 rounded-sm"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Business Report</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 bg-blue-600 rounded-sm"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Next.js Performance</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-4 h-4 bg-blue-600 rounded-sm"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Full Frontend Customization</span>
+                    </div>
+                </div>
+                <div class="mt-8 flex justify-end">
+                    <button class="w-64 h-10 rounded-full bg-blue-600 border border-blue-600 text-white text-sm font-bold font-inter">
+                        SUBSCRIBE NOW
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Website Plans Section -->
+    <section class="relative bg-white/60 rounded-t-[100px] shadow-2xl overflow-hidden py-24 px-20">
+        <div class="text-center mb-16">
+            <p class="text-sky-950 text-sm font-medium font-inter mb-2">CHOOSE YOUR PLAN</p>
+            <h2 class="text-5xl font-semibold mb-4">
+                <span class="text-orange-500">Scalable</span>
+                <span class="text-slate-900"> Digital</span>
+                <span class="text-sky-400"> Growth</span>
+            </h2>
+            <p class="text-sky-950 text-base font-roboto">Conversion-optimized websites and data-driven marketing designed to grow your revenue and brand.</p>
+        </div>
+        
+        <!-- Website Cards -->
+        <div class="grid grid-cols-3 gap-6 mb-8">
+            <!-- Ready Website -->
+            <div class="bg-white rounded-3xl border p-10">
+                <h3 class="text-zinc-800 text-2xl font-bold font-inter mb-2">Ready Website</h3>
+                <p class="text-zinc-800 text-sm font-questrial mb-6">Fully managed on our hosting.</p>
+                <div class="space-y-6 mb-8">
+                    <div class="flex items-center gap-4">
+                        <div class="w-4 h-4 rounded-full border-2 border-green-700"></div>
+                        <span class="text-zinc-700 text-base font-questrial">WordPress Website - 5,000 BDT</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-4 h-4 rounded-full border-2 border-green-700"></div>
+                        <span class="text-zinc-700 text-base font-questrial">PHP Laravel Website 9,999 BDT</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-4 h-4 rounded-full border-2 border-green-700"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Next.js Website 20,000 BDT</span>
+                    </div>
+                </div>
+                <p class="text-zinc-800 text-xs font-questrial mb-4">Hosting charges will add on your storage requirements.</p>
+                <button class="w-full h-10 rounded-full border-2 border-green-700 text-green-700 text-sm font-bold font-inter">
+                    Get Licence
+                </button>
+            </div>
+            
+            <!-- Custom Website -->
+            <div class="bg-white rounded-3xl border p-10">
+                <h3 class="text-zinc-800 text-2xl font-bold font-inter mb-2">Custom Website</h3>
+                <p class="text-zinc-800 text-sm font-questrial mb-6">Flexible hosting: Yours or ours.</p>
+                <div class="space-y-4 mb-8">
+                    <div class="flex items-start gap-4">
+                        <div class="w-4 h-4 rounded-full border-2 border-orange-500 mt-1"></div>
+                        <span class="text-zinc-700 text-base font-questrial">WordPress Website (With 5 Reviews) 9,999 BDT</span>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-4 h-4 rounded-full border-2 border-orange-500 mt-1"></div>
+                        <span class="text-zinc-700 text-base font-questrial">PHP Laravel Website (With 5 Reviews) Starting From 15,000 BDT</span>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-4 h-4 rounded-full border-2 border-orange-500 mt-1"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Next.js Website (With 5 Reviews) Starting From 30,000 BDT</span>
+                    </div>
+                </div>
+                <p class="text-zinc-800 text-xs font-questrial mb-4">Hosting charges will add on your storage requirements.</p>
+                <button class="w-full h-10 rounded-full border-2 border-orange-500 text-orange-500 text-sm font-bold font-inter">
+                    Contact Us
+                </button>
+            </div>
+            
+            <!-- Website With Source Code -->
+            <div class="bg-white rounded-3xl border p-10">
+                <h3 class="text-zinc-800 text-2xl font-bold font-inter mb-2">Website With Source Code</h3>
+                <p class="text-zinc-800 text-sm font-questrial mb-6">Your hosting or our managed servers.</p>
+                <div class="space-y-3 mb-8">
+                    <div class="flex items-start gap-4">
+                        <div class="w-4 h-4 rounded-full border-2 border-blue-600 mt-1"></div>
+                        <span class="text-zinc-700 text-base font-questrial">WordPress Website (With 5 Reviews) Starting From 15,000 BDT</span>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-4 h-4 rounded-full border-2 border-blue-600 mt-1"></div>
+                        <span class="text-zinc-700 text-base font-questrial">PHP Laravel Website (With 5 Reviews) Starting From 45,000 BDT</span>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-4 h-4 bg-blue-600 rounded-sm mt-1"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Next.js Website (With 5 Reviews) Starting From 90,000 BDT</span>
+                    </div>
+                </div>
+                <p class="text-zinc-800 text-xs font-questrial mb-4">Hosting charges will add on your storage requirements.</p>
+                <button class="w-full h-10 rounded-full bg-blue-600 border border-blue-600 text-white text-sm font-bold font-inter">
+                    Contact Us
+                </button>
+            </div>
+        </div>
+        
+        <!-- App Cards -->
+        <div class="grid grid-cols-2 gap-6">
+            <div class="bg-white rounded-2xl p-8 flex justify-between items-center">
+                <div>
+                    <h3 class="text-zinc-800 text-2xl font-bold font-inter">Flutter App</h3>
+                    <p class="text-zinc-800 text-sm font-questrial">APK Build Only Trusted by Google</p>
+                </div>
+                <button class="w-56 h-10 rounded-full border-2 border-orange-500 text-orange-500 text-sm font-bold font-inter">
+                    Contact Us
+                </button>
+            </div>
+            <div class="bg-white rounded-2xl p-8 flex justify-between items-center">
+                <div>
+                    <h3 class="text-zinc-800 text-2xl font-bold font-inter">Google Play Store</h3>
+                    <p class="text-zinc-800 text-sm font-questrial">APK Build With Upload to Play store+ App Store</p>
+                </div>
+                <button class="w-56 h-10 rounded-full border-2 border-blue-600 text-blue-600 text-sm font-bold font-inter">
+                    Contact Us
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marketing Section -->
+    <section class="relative bg-white/60 rounded-t-[100px] shadow-2xl overflow-hidden py-24 px-20">
+        <div class="text-center mb-16">
+            <p class="text-sky-950 text-sm font-medium font-inter mb-2">Boost Your Sales</p>
+            <h2 class="text-5xl font-semibold mb-4">
+                <span class="text-lime-950">Empowering </span>
+                <span class="text-orange-500">Tech,</span>
+                <span class="text-lime-950"> Enriching </span>
+                <span class="text-sky-400">Trade</span>
+            </h2>
+            <p class="text-sky-950 text-base font-roboto">Maximize Your Global Reach and Strategically Multiply Your Business Revenue.</p>
+        </div>
+        
+        <div class="grid grid-cols-3 gap-6">
+            <!-- Facebook Marketing -->
+            <div class="bg-white rounded-3xl border p-10">
+                <h3 class="text-zinc-800 text-2xl font-bold font-inter mb-2">Facebook Marketing</h3>
+                <p class="text-zinc-800 text-sm font-questrial mb-6">Proven strategies to boost your online sales.</p>
+                <div class="space-y-6 mb-8">
+                    <div class="flex items-center gap-4">
+                        <div class="w-4 h-4 rounded-full border-2 border-green-700"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Post Create and Boost (x1) 1000 BDT</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-4 h-4 rounded-full border-2 border-green-700"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Post Create and Boost (x3) 2500 BDT</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-4 h-4 bg-green-700 rounded-sm"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Post Create and Boost (x8) 5000 BDT</span>
+                    </div>
+                </div>
+                <button class="w-full h-10 rounded-full bg-green-700 border border-green-700 text-white text-sm font-bold font-inter">
+                    Get Appointment
+                </button>
+            </div>
+            
+            <!-- SEO -->
+            <div class="bg-white rounded-3xl border p-10">
+                <h3 class="text-zinc-800 text-2xl font-bold font-inter mb-2">SEO</h3>
+                <p class="text-zinc-800 text-sm font-questrial mb-6">Better rankings. More traffic. Higher revenue.</p>
+                <div class="space-y-3 mb-8">
+                    <div class="flex items-center gap-4">
+                        <div class="w-4 h-4 rounded-full border-2 border-orange-500"></div>
+                        <span class="text-zinc-700 text-base font-questrial">On Page SEO</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-4 h-4 rounded-full border-2 border-orange-500"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Off Page SEO</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-4 h-4 rounded-full border-2 border-orange-500"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Local SEO</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-4 h-4 rounded-full border-2 border-orange-500"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Technical SEO</span>
+                    </div>
+                </div>
+                <button class="w-full h-10 rounded-full border-2 border-orange-500 text-orange-500 text-sm font-bold font-inter">
+                    Get Appointment
+                </button>
+            </div>
+            
+            <!-- Contract Basis -->
+            <div class="bg-white rounded-3xl border p-10">
+                <h3 class="text-zinc-800 text-2xl font-bold font-inter mb-2">Contract Basis</h3>
+                <p class="text-zinc-800 text-sm font-questrial mb-6">Grow your business with long-term organic growth.</p>
+                <div class="space-y-3 mb-8">
+                    <div class="flex items-center gap-4">
+                        <div class="w-4 h-4 rounded-full border-2 border-blue-600"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Full Stack Digital Marketing Package</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-4 h-4 rounded-full border-2 border-blue-600"></div>
+                        <span class="text-zinc-700 text-base font-questrial">E-commerce F-commerce Basic Setup</span>
+                    </div>
+                </div>
+                <button class="w-full h-10 rounded-full border-2 border-blue-600 text-blue-600 text-sm font-bold font-inter">
+                    Get Appointment
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Infrastructure Section -->
+    <section class="relative bg-white/60 rounded-t-[100px] shadow-2xl overflow-hidden py-24 px-20">
+        <div class="text-center mb-16">
+            <p class="text-sky-950 text-sm font-medium font-inter mb-2">Grab a Plan</p>
+            <h2 class="text-5xl font-semibold mb-4">
+                <span class="text-sky-950">Empowering </span>
+                <span class="text-orange-500">Tech,</span>
+                <span class="text-sky-950"> Enriching </span>
+                <span class="text-sky-400">Trade</span>
+            </h2>
+            <p class="text-sky-950 text-base font-roboto">Integrated solutions for infrastructure, communication, and global trade.</p>
+        </div>
+        
+        <div class="grid grid-cols-3 gap-6">
+            <!-- Domain & Hosting -->
+            <div class="bg-white rounded-3xl border p-10">
+                <div class="flex items-baseline gap-2 mb-1">
+                    <h3 class="text-zinc-800 text-2xl font-bold font-inter">Domain & Hosting</h3>
+                    <span class="text-zinc-800 text-sm font-questrial">/year</span>
+                </div>
+                <p class="text-zinc-800 text-sm font-questrial mb-6">Proven strategies to boost your online sales.</p>
+                <div class="space-y-3 mb-8">
+                    <div class="flex items-center gap-4">
+                        <div class="w-4 h-4 rounded-full border-2 border-green-700"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Domain (As Required)</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-4 h-4 rounded-full border-2 border-green-700"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Hosting (As Required)</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-4 h-4 rounded-full border-2 border-green-700"></div>
+                        <span class="text-zinc-700 text-base font-questrial">VPS Server (BD)</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-4 h-4 rounded-full border-2 border-green-700"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Dedicated Server (BD)</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-4 h-4 bg-green-700 rounded-sm"></div>
+                        <span class="text-zinc-700 text-base font-questrial">cPanel</span>
+                    </div>
+                </div>
+                <button class="w-full h-10 rounded-full bg-green-700 border border-green-700 text-white text-sm font-bold font-inter">
+                    Subscribe Now
+                </button>
+            </div>
+            
+            <!-- IP Number -->
+            <div class="bg-white rounded-3xl border p-10">
+                <h3 class="text-zinc-800 text-2xl font-bold font-inter mb-2">IP Number</h3>
+                <p class="text-zinc-800 text-sm font-questrial mb-6">Proven strategies to boost your online sales.</p>
+                <div class="space-y-3 mb-8">
+                    <div class="flex items-center gap-4">
+                        <div class="w-4 h-4 rounded-full border-2 border-orange-500"></div>
+                        <span class="text-zinc-700 text-base font-questrial">IP Phone Number</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-4 h-4 rounded-full border-2 border-orange-500"></div>
+                        <span class="text-zinc-700 text-base font-questrial">IP Phone Number (VIP)</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-4 h-4 rounded-full border-2 border-orange-500"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Cloud PBX</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-4 h-4 rounded-full border-2 border-orange-500"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Bulk SMS (Your IP Number to SMS)</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-4 h-4 rounded-full border-2 border-orange-500"></div>
+                        <span class="text-zinc-700 text-base font-questrial">WhatsApp Call Center</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-4 h-4 rounded-full border-2 border-orange-500"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Dedicated IP PBX</span>
+                    </div>
+                </div>
+                <button class="w-full h-10 rounded-full border-2 border-orange-500 text-orange-500 text-sm font-bold font-inter">
+                    Subscribe Now
+                </button>
+            </div>
+            
+            <!-- Product Sourcing -->
+            <div class="bg-white rounded-3xl border p-10">
+                <div class="flex items-baseline gap-2 mb-1">
+                    <h3 class="text-zinc-800 text-2xl font-bold font-inter">Product Sourcing</h3>
+                    <span class="text-zinc-800 text-sm font-inter">(China)</span>
+                </div>
+                <p class="text-zinc-800 text-sm font-questrial mb-6">Proven strategies to boost your online sales.</p>
+                <div class="space-y-3 mb-8">
+                    <div class="flex items-center gap-4">
+                        <div class="w-4 h-4 rounded-full border-2 border-blue-600"></div>
+                        <span class="text-zinc-700 text-base font-questrial">QC Facilities</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-4 h-4 rounded-full border-2 border-blue-600"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Warehouse Facilities (Guanzu, China)</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-4 h-4 rounded-full border-2 border-blue-600"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Air Shipment (Maximum 10 to 14 Days)</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-4 h-4 rounded-full border-2 border-blue-600"></div>
+                        <span class="text-zinc-700 text-base font-questrial">Buy Product From China (through us)</span>
+                    </div>
+                </div>
+                <button class="w-full h-10 rounded-full border-2 border-blue-600 text-blue-600 text-sm font-bold font-inter">
+                    Subscribe Now
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-24 px-20">
+        <div class="text-center mb-12">
+            <h2 class="text-black text-4xl font-bold mb-4">Contact Us</h2>
+            <p class="text-neutral-500 text-lg font-medium">Any question or remarks? Just write us a message!</p>
+        </div>
+        
+        <div class="max-w-6xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden flex">
+            <!-- Left Side - Contact Info -->
+            <div class="w-[491px] bg-black p-10 relative overflow-hidden">
+                <div class="absolute bottom-0 right-0 w-64 h-64 bg-zinc-900 rounded-full translate-x-1/4 translate-y-1/4"></div>
+                <div class="absolute bottom-20 right-20 w-36 h-36 bg-zinc-700/50 rounded-full"></div>
+                
+                <div class="relative z-10">
+                    <h3 class="text-white text-3xl font-semibold mb-4">Contact Information</h3>
+                    <p class="text-stone-300 text-lg mb-16">Say something to start a live chat!</p>
+                    
+                    <div class="space-y-12">
+                        <div class="flex items-center gap-6">
+                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+                            <span class="text-white text-base">+88 0141-0050031</span>
+                        </div>
+                        <div class="flex items-center gap-6">
+                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+                            <span class="text-white text-base">09617 510 520</span>
+                        </div>
+                        <div class="flex items-center gap-6">
+                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+                            <span class="text-white text-base">systemnextit@gmail.com</span>
+                        </div>
+                        <div class="flex items-center gap-6">
+                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+                            <span class="text-white text-base">D-14/3, Bank Colony, Savar, Dhaka-1340</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Icons -->
+                    <div class="flex gap-4 mt-20">
+                        <a href="#" class="w-7 h-7 bg-zinc-900 rounded-full flex items-center justify-center">
+                            <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M16.5 0h-13C1.57 0 0 1.57 0 3.5v13C0 18.43 1.57 20 3.5 20h13c1.93 0 3.5-1.57 3.5-3.5v-13C20 1.57 18.43 0 16.5 0zM8 16H5V8h3v8zM6.5 6.73c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zM16 16h-3v-4.14c0-1.14-.02-2.61-1.59-2.61-1.59 0-1.84 1.24-1.84 2.53V16H7.5V8h2.88v1.09h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.59V16z"/></svg>
+                        </a>
+                        <a href="#" class="w-7 h-7 bg-white rounded-full flex items-center justify-center">
+                            <svg class="w-4 h-4 text-black" fill="currentColor" viewBox="0 0 20 20"><path d="M18.94 0H1.06C.474 0 0 .474 0 1.06v17.88c0 .586.474 1.06 1.06 1.06h17.88c.586 0 1.06-.474 1.06-1.06V1.06c0-.586-.474-1.06-1.06-1.06zM5.077 17.011H2.539V7.515h2.538v9.496zM3.808 6.374a1.469 1.469 0 110-2.938 1.469 1.469 0 010 2.938zm13.203 10.637h-2.537v-4.619c0-1.102-.02-2.519-1.535-2.519-1.537 0-1.772 1.2-1.772 2.439v4.699H8.63V7.515h2.435v1.297h.034c.339-.642 1.168-1.318 2.403-1.318 2.57 0 3.045 1.692 3.045 3.892v5.625z"/></svg>
+                        </a>
+                        <a href="#" class="w-7 h-7 bg-zinc-900 rounded-full flex items-center justify-center">
+                            <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M10 0C4.478 0 0 4.478 0 10c0 4.991 3.657 9.128 8.438 9.879V12.89h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.989C16.343 19.129 20 14.99 20 10c0-5.522-4.478-10-10-10z"/></svg>
+                        </a>
+                        <a href="#" class="w-7 h-7 bg-zinc-900 rounded-full flex items-center justify-center">
+                            <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1.802c2.67 0 2.987.01 4.042.058 2.71.124 3.973 1.405 4.097 4.097.048 1.054.058 1.371.058 4.042 0 2.672-.01 2.988-.058 4.042-.124 2.69-1.385 3.973-4.097 4.097-1.055.048-1.371.058-4.042.058-2.67 0-2.987-.01-4.042-.058-2.714-.124-3.973-1.409-4.097-4.097-.048-1.054-.058-1.37-.058-4.042 0-2.67.01-2.987.058-4.042.124-2.69 1.385-3.973 4.097-4.097C7.013 1.812 7.33 1.802 10 1.802zM10 0C7.284 0 6.944.012 5.878.06 2.246.227.228 2.242.06 5.877.012 6.944 0 7.284 0 10s.012 3.057.06 4.123c.167 3.632 2.182 5.65 5.817 5.817 1.067.048 1.407.06 4.123.06s3.057-.012 4.123-.06c3.629-.167 5.652-2.182 5.817-5.817.048-1.066.06-1.407.06-4.123s-.012-3.056-.06-4.122C19.773 2.249 17.758.228 14.123.06 13.057.012 12.716 0 10 0zm0 4.865a5.135 5.135 0 100 10.27 5.135 5.135 0 000-10.27zm0 8.468a3.333 3.333 0 110-6.666 3.333 3.333 0 010 6.666zm5.338-9.87a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Side - Form -->
+            <div class="flex-1 p-10">
+                <form class="space-y-8">
+                    <div class="grid grid-cols-2 gap-8">
+                        <div>
+                            <label class="text-neutral-400 text-xs font-medium block mb-2">First Name</label>
+                            <input type="text" class="w-full border-b border-neutral-400 py-2 focus:outline-none focus:border-black" placeholder="">
+                        </div>
+                        <div>
+                            <label class="text-black text-xs font-medium block mb-2">Last Name</label>
+                            <input type="text" class="w-full border-b border-neutral-400 py-2 focus:outline-none focus:border-black" placeholder="Doe" value="Doe">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-8">
+                        <div>
+                            <label class="text-neutral-400 text-xs font-medium block mb-2">Email</label>
+                            <input type="email" class="w-full border-b border-neutral-400 py-2 focus:outline-none focus:border-black" placeholder="">
+                        </div>
+                        <div>
+                            <label class="text-black text-xs font-medium block mb-2">Phone Number</label>
+                            <input type="tel" class="w-full border-b border-black py-2 focus:outline-none" placeholder="+88 018 XXXX-XXXXX" value="+88 018 XXXX-XXXXX">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="text-black text-sm font-semibold block mb-4">Select Subject?</label>
+                        <div class="flex gap-8">
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="radio" name="subject" value="general" checked class="hidden peer">
+                                <div class="w-3 h-3.5 bg-black peer-checked:bg-black rounded-sm"></div>
+                                <span class="text-black text-xs">General Inquiry</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="radio" name="subject" value="website" class="hidden peer">
+                                <div class="w-3 h-3.5 bg-neutral-200 peer-checked:bg-black rounded-sm"></div>
+                                <span class="text-black text-xs">Website</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="radio" name="subject" value="service" class="hidden peer">
+                                <div class="w-3 h-3.5 bg-neutral-200 peer-checked:bg-black rounded-sm"></div>
+                                <span class="text-black text-xs">Service</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="radio" name="subject" value="career" class="hidden peer">
+                                <div class="w-3 h-3.5 bg-neutral-200 peer-checked:bg-black rounded-sm"></div>
+                                <span class="text-black text-xs">Career</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="text-neutral-400 text-xs font-medium block mb-2">Message</label>
+                        <textarea class="w-full border-b border-neutral-400 py-2 focus:outline-none focus:border-black resize-none" rows="2" placeholder="Write your message.."></textarea>
+                    </div>
+                    
+                    <div class="flex justify-end">
+                        <button type="submit" class="px-12 py-3.5 bg-black rounded text-white text-base font-medium shadow-lg">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-16 px-20">
+        <div class="max-w-7xl mx-auto">
+            <div class="border-t border-white mb-12"></div>
+            
+            <div class="grid grid-cols-5 gap-8">
+                <!-- Logo -->
+                <div>
+                    <div class="mb-8">
+                        <div class="h-8 w-56 bg-gradient-to-r from-sky-400 to-blue-500"></div>
+                        <div class="h-2.5 w-56 bg-white mt-2"></div>
+                    </div>
+                </div>
+                
+                <!-- Company -->
+                <div>
+                    <h4 class="text-white text-lg font-semibold mb-6">Company</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-white text-base hover:text-gray-300">About</a></li>
+                        <li><a href="#" class="text-white text-base hover:text-gray-300">Contact</a></li>
+                        <li><a href="#" class="text-white text-base hover:text-gray-300">Blogs</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Legal -->
+                <div>
+                    <h4 class="text-white text-lg font-semibold mb-6">Legal</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-white text-base hover:text-gray-300">Privacy Policy</a></li>
+                        <li><a href="#" class="text-white text-base hover:text-gray-300">Terms & Services</a></li>
+                        <li><a href="#" class="text-white text-base hover:text-gray-300">Terms of Use</a></li>
+                        <li><a href="#" class="text-white text-base hover:text-gray-300">Refund Policy</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white text-lg font-semibold mb-6">Quick Links</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-white text-base hover:text-gray-300">Forum</a></li>
+                        <li><a href="#" class="text-white text-base hover:text-gray-300">Downloads</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter -->
+                <div class="bg-neutral-900 rounded-xl p-6">
+                    <h4 class="text-white text-lg font-semibold mb-6">Join Our Newsletter</h4>
+                    <div class="flex">
+                        <input type="email" class="flex-1 bg-stone-900 rounded-l px-4 py-2 text-white text-xs placeholder-zinc-600 focus:outline-none" placeholder="Your email address">
+                        <button class="bg-black px-4 py-2 text-white text-xs font-medium rounded-r">Subscribe</button>
+                    </div>
+                    <p class="text-white/50 text-xs mt-4 font-manrope">* Will send you weekly updates for your better tool management.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,240 @@
+.div-wrapper {
+  background-color: #ffffff;
+  border-radius: 24px;
+  height: 338px;
+  left: 732px;
+  overflow: hidden;
+  position: absolute;
+  top: 249px;
+  width: 614px;
+}
+
+.div-wrapper .frame-6 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  left: 40px;
+  position: absolute;
+  top: 30px;
+  width: 275px;
+}
+
+.div-wrapper .text-wrapper-19 {
+  color: var(--variable-collection-black);
+  font-family: "Inter", Helvetica;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: 251.69px;
+}
+
+.div-wrapper .hands-free-hosting-3 {
+  align-self: stretch;
+  color: #2f2f2f;
+  font-family: "Questrial", Helvetica;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+}
+
+.div-wrapper .element-month-2 {
+  color: #2f2f2f;
+  font-family: "Poppins", Helvetica;
+  font-size: 32px;
+  font-weight: 400;
+  left: calc(50.00% + 8px);
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 30px;
+}
+
+.div-wrapper .text-wrapper-20 {
+  font-weight: 700;
+}
+
+.div-wrapper .text-wrapper-21 {
+  font-family: "Inter", Helvetica;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.div-wrapper .frame-7 {
+  align-items: flex-start;
+  display: inline-flex;
+  gap: 38px;
+  left: 40px;
+  position: absolute;
+  top: 102px;
+}
+
+.div-wrapper .frame-8 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  width: 237px;
+}
+
+.div-wrapper .group-11 {
+  height: 24px;
+  margin-right: -2.00px;
+  position: relative;
+  width: 239px;
+}
+
+.div-wrapper .free-sub-domain-3 {
+  color: #454452;
+  font-family: "Questrial", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  left: calc(50.00% - 80px);
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 4px;
+  white-space: nowrap;
+}
+
+.div-wrapper .check-circle-2 {
+  height: 24px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 24px;
+}
+
+.div-wrapper .group-12 {
+  height: 24px;
+  position: relative;
+  width: 235px;
+}
+
+.div-wrapper .text-wrapper-22 {
+  color: #454452;
+  font-family: "Questrial", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  left: calc(50.00% - 78px);
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 4px;
+  width: 193px;
+}
+
+.div-wrapper .group-13 {
+  height: 24px;
+  position: relative;
+  width: 187px;
+}
+
+.div-wrapper .text-wrapper-23 {
+  color: #454452;
+  font-family: "Questrial", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  left: calc(50.00% - 54px);
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 4px;
+  white-space: nowrap;
+}
+
+.div-wrapper .group-14 {
+  height: 32px;
+  position: relative;
+  width: 211px;
+}
+
+.div-wrapper .initial-load-time-3 {
+  color: #454452;
+  font-family: "Questrial", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  left: calc(50.00% - 66px);
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 4px;
+}
+
+.div-wrapper .text-wrapper-24 {
+  color: #454452;
+  font-family: "Questrial", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.div-wrapper .text-wrapper-25 {
+  font-size: 12px;
+}
+
+.div-wrapper .frame-9 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  width: 233px;
+}
+
+.div-wrapper .group-15 {
+  height: 24px;
+  margin-right: -2.00px;
+  position: relative;
+  width: 235px;
+}
+
+.div-wrapper .text-wrapper-26 {
+  color: #454452;
+  font-family: "Questrial", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  left: calc(50.00% - 78px);
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 2px;
+  width: 193px;
+}
+
+.div-wrapper .button-3 {
+  all: unset;
+  align-items: center;
+  border: 1.5px solid;
+  border-color: #1e90ff;
+  border-radius: 69px;
+  box-sizing: border-box;
+  display: flex;
+  gap: 10px;
+  height: 40px;
+  justify-content: center;
+  left: calc(50.00% + 8px);
+  padding: 11px 69px;
+  position: absolute;
+  top: 280px;
+  width: 259px;
+}
+
+.div-wrapper .text-wrapper-27 {
+  color: #1e90ff;
+  font-family: "Inter", Helvetica;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+}

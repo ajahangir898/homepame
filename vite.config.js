@@ -16,4 +16,26 @@ export default defineConfig(({ mode }) => ({
       },
     },
   },
+  build: {
+    // Enable minification and compression
+    minify: "esbuild",
+    // Split chunks for better caching
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ["react", "react-dom", "react-router-dom"],
+        },
+      },
+    },
+    // Enable source maps for production debugging (optional)
+    sourcemap: false,
+    // Target modern browsers for smaller bundles
+    target: "es2020",
+    // Chunk size warning limit
+    chunkSizeWarningLimit: 1000,
+  },
+  // Optimize dependencies
+  optimizeDeps: {
+    include: ["react", "react-dom", "react-router-dom"],
+  },
 }));
