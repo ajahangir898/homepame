@@ -1,20 +1,22 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
+import { useLocation } from "react-router-dom";
+import "../../components/SubscriptionModal/style.css";
 import "./style.css";
 
 // Payment method icons/logos
 const BkashLogo = () => (
-  <img 
-    src="https://upload.wikimedia.org/wikipedia/commons/6/6e/BKash_Logo.png" 
-    alt="bKash" 
-    className="payment-logo bkash-logo" 
+  <img
+    src="https://upload.wikimedia.org/wikipedia/commons/6/6e/BKash_Logo.png"
+    alt="bKash"
+    className="payment-logo bkash-logo"
   />
 );
 
 const NagadLogo = () => (
-  <img 
-    src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Nagad_logo.png/320px-Nagad_logo.png" 
-    alt="Nagad" 
-    className="payment-logo nagad-logo" 
+  <img
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Nagad_logo.png/320px-Nagad_logo.png"
+    alt="Nagad"
+    className="payment-logo nagad-logo"
   />
 );
 
@@ -29,10 +31,10 @@ const VisaMastercardLogo = () => (
 );
 
 const IslamiBankLogo = () => (
-  <img 
-    src="https://upload.wikimedia.org/wikipedia/commons/9/96/IBBL_Logo.png" 
-    alt="Islami Bank" 
-    className="bank-select-logo" 
+  <img
+    src="https://upload.wikimedia.org/wikipedia/commons/9/96/IBBL_Logo.png"
+    alt="Islami Bank"
+    className="bank-select-logo"
   />
 );
 
@@ -42,7 +44,6 @@ const DBBLLogo = () => (
   </div>
 );
 
-// Discount icon
 const DiscountIcon = () => (
   <svg className="discount-icon" viewBox="0 0 24 24" fill="none" stroke="#788197" strokeWidth="1.5">
     <rect x="4" y="5.5" width="16" height="13" rx="2" />
@@ -50,7 +51,15 @@ const DiscountIcon = () => (
   </svg>
 );
 
-export const SubscriptionModal = ({ isOpen, onClose, plan }) => {
+const defaultPlan = {
+  name: "Premium",
+  price: "1200",
+};
+
+export const PaymentScreen = () => {
+  const location = useLocation();
+  const plan = useMemo(() => location.state?.plan ?? defaultPlan, [location.state]);
+
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -64,10 +73,8 @@ export const SubscriptionModal = ({ isOpen, onClose, plan }) => {
   const [discountApplied, setDiscountApplied] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  if (!isOpen || !plan) return null;
-
-  const price = parseInt(plan.price) * 1000;
-  const actualPrice = plan.name === "Premium" ? 20000 : price;
+  const price = plan?.price ? parseInt(plan.price, 10) : 20000;
+  const actualPrice = price;
   const discount = discountApplied ? 500 : 0;
   const total = actualPrice - discount;
 
@@ -85,36 +92,21 @@ export const SubscriptionModal = ({ isOpen, onClose, plan }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    
-    // Simulate API call
+
     setTimeout(() => {
       setLoading(false);
       alert("Payment confirmed! Thank you for subscribing.");
-      onClose();
     }, 1500);
   };
 
-  const handleOverlayClick = (e) => {
-    if (e.target === e.currentTarget) {
-      onClose();
-    }
-  };
-
   return (
-    <div className="subscription-modal-overlay" onClick={handleOverlayClick}>
-      <div className="subscription-modal">
-        {/* Close Button */}
-        <button className="modal-close-btn" onClick={onClose}>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M18 6L6 18M6 6l12 12" />
-          </svg>
-        </button>
-
+    <div className="payment-page">
+      <div className="subscription-modal payment-page-card">
         <div className="subscription-modal-content">
           {/* Left Panel - Item Summary */}
           <div className="modal-left-panel">
             <h2 className="panel-title">Item Summary</h2>
-            
+
             {/* User Information */}
             <div className="form-section">
               <h3 className="section-title-main">User Information</h3>
@@ -231,7 +223,7 @@ export const SubscriptionModal = ({ isOpen, onClose, plan }) => {
                     <DBBLLogo />
                   </label>
                 </div>
-                
+
                 <div className="form-row two-cols">
                   <div className="form-group">
                     <label>Bank Account Name</label>
@@ -278,8 +270,8 @@ export const SubscriptionModal = ({ isOpen, onClose, plan }) => {
               By Clicking "Confirm Payment" I agree to the companies term of services
             </p>
 
-            <button 
-              className="confirm-payment-btn" 
+            <button
+              className="confirm-payment-btn"
               onClick={handleSubmit}
               disabled={loading}
             >
@@ -290,13 +282,13 @@ export const SubscriptionModal = ({ isOpen, onClose, plan }) => {
           {/* Right Panel - Payment Summary */}
           <div className="modal-right-panel">
             <h2 className="panel-title-payment">Payment</h2>
-            
+
             <div className="payment-summary-header">
               <div className="plan-info-block">
                 <h3 className="subscription-type">E-commerce Subscription</h3>
                 <div className="plan-name-line">
                   <span className="plan-text">Plan:</span>
-                  <span className="plan-name-value">{plan.name}</span>
+                  <span className="plan-name-value">{plan?.name}</span>
                 </div>
                 <p className="hosting-note">Fully managed on our hosting.</p>
               </div>
@@ -313,7 +305,7 @@ export const SubscriptionModal = ({ isOpen, onClose, plan }) => {
                 onChange={handleChange}
                 className="discount-field"
               />
-              <button 
+              <button
                 className="apply-discount-btn"
                 onClick={handleApplyDiscount}
                 type="button"
@@ -342,5 +334,3 @@ export const SubscriptionModal = ({ isOpen, onClose, plan }) => {
     </div>
   );
 };
-
-export default SubscriptionModal;

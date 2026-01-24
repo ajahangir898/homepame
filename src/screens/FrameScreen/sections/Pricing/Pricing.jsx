@@ -1,5 +1,5 @@
-import { memo, useState } from "react";
-import { SubscriptionModal } from "../../../../components/SubscriptionModal";
+import { memo } from "react";
+import { useNavigate } from "react-router-dom";
 import "./style.css";
 
 const CheckIcon = ({ color = "#15803d", theme = "green" }) => {
@@ -93,17 +93,10 @@ const PricingCard = memo(({ plan, onSubscribe }) => (
 PricingCard.displayName = "PricingCard";
 
 export const Pricing = memo(() => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedPlan, setSelectedPlan] = useState(null);
+  const navigate = useNavigate();
 
   const handleSubscribe = (plan) => {
-    setSelectedPlan(plan);
-    setIsModalOpen(true);
-  };
-
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-    setSelectedPlan(null);
+    navigate("/payment", { state: { plan } });
   };
 
   const plans = [
@@ -213,11 +206,6 @@ export const Pricing = memo(() => {
         </div>
       </div>
 
-      <SubscriptionModal 
-        isOpen={isModalOpen} 
-        onClose={handleCloseModal} 
-        plan={selectedPlan} 
-      />
     </section>
   );
 });

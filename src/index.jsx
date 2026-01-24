@@ -1,6 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { FrameScreen } from "./screens/FrameScreen";
+import { BrowserRouter } from "react-router-dom";
+import { App } from "./App";
 
 // Import global styles
 import "./styles/animations.css";
@@ -8,6 +9,8 @@ import "./styles/responsive.css";
 
 createRoot(document.getElementById("app")).render(
   <StrictMode>
-    <FrameScreen />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </StrictMode>,
 );

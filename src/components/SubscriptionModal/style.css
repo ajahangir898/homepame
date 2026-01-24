@@ -4,14 +4,16 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
-  padding: 16px;
+z-index: 99999;
+    padding: 20px;
   overflow-y: auto;
   animation: fadeIn 0.2s ease-out;
 }
@@ -35,16 +37,17 @@
 .subscription-modal {
   background: #ffffff;
   border-radius: 20px;
-  width: 100%;
-  max-width: 900px;
-  max-height: 90vh;
+width: 95%;
+    max-width: 1200px;
+    min-height: 600px;
+    max-height: calc(100vh - 40px);
   overflow-y: auto;
   position: relative;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
   animation: slideUp 0.3s ease-out;
 }
 
-/* Custom Scrollbar for Modal */
+/* Custom Scrollbar */
 .subscription-modal::-webkit-scrollbar {
   width: 6px;
 }
@@ -62,6 +65,7 @@
   background: #94a3b8;
 }
 
+/* Close Button */
 .modal-close-btn {
   position: absolute;
   top: 12px;
@@ -86,73 +90,62 @@
   transform: rotate(90deg);
 }
 
-.modal-close-btn:active {
-  transform: rotate(90deg) scale(0.95);
-}
-
 .modal-close-btn svg {
   width: 18px;
   height: 18px;
 }
 
+/* Modal Content Grid */
 .subscription-modal-content {
   display: grid;
-  grid-template-columns: 1fr 340px;
+grid-template-columns: 1fr 1fr;
 }
 
-/* Left Panel */
+/* ========== LEFT PANEL ========== */
 .modal-left-panel {
-  padding: 32px;
-  border-right: 1px solid #e5e7eb;
+padding: 40px;
+    background: #ffffff;
 }
 
-/* Right Panel */
-.modal-right-panel {
-  padding: 32px;
-  background: linear-gradient(180deg, #e8f4fc 0%, #d4ecf9 100%);
-  border-radius: 0 20px 20px 0;
-}
-
+/* Panel Title */
 .panel-title {
-  font-family: "Poppins", sans-serif;
-  font-size: 22px;
-  font-weight: 600;
-  color: #000;
-  margin: 0 0 24px 0;
-  text-align: center;
-  position: relative;
-}
-
-.panel-title::after {
-  content: '';
-  position: absolute;
-  bottom: -8px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 40px;
-  height: 3px;
-  background: linear-gradient(90deg, #22c55e, #16a34a);
-  border-radius: 2px;
+font-family: "Rubik", sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    color: #1A1A1A;
+    margin: 0 0 40px 0;
+    text-align: center;
 }
 
 /* Form Sections */
 .form-section {
-  margin-bottom: 28px;
+margin-bottom: 32px;
 }
 
-.section-title {
+.section-title-main {
+    font-family: "Rubik", sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: #000;
+    margin: 0 0 22px 0;
+    line-height: 1.4;
+    letter-spacing: 0.22px;
+}
+
+.section-title-sub {
   font-family: "Poppins", sans-serif;
-  font-size: 13px;
+font-size: 16px;
   font-weight: 600;
-  color: #374151;
-  margin: 0 0 14px 0;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+color: #000;
+    margin: 0 0 16px 0;
+    line-height: 1.4;
+    letter-spacing: 0.16px;
 }
 
+/* Form Row */
 .form-row {
   display: grid;
-  gap: 16px;
+gap: 24px;
 }
 
 .form-row.three-cols {
@@ -163,272 +156,259 @@
   grid-template-columns: repeat(2, 1fr);
 }
 
+/* Form Group */
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+gap: 8px;
 }
 
 .form-group label {
-  font-family: "Inter", sans-serif;
-  font-size: 11px;
-  font-weight: 500;
-  color: #6b7280;
-  text-transform: uppercase;
-  letter-spacing: 0.3px;
+font-family: "Rubik", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+    line-height: 1.4;
+    letter-spacing: 0.16px;
 }
 
 .form-group input {
-  padding: 12px 14px;
-  border: 1px solid #e5e7eb;
-  border-radius: 8px;
-  font-family: "Inter", sans-serif;
-  font-size: 14px;
-  color: #1f2937;
-  background: #fff;
+padding: 0;
+    padding-bottom: 5px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 0;
+    font-family: "Rubik", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.4);
+    background: transparent;
   outline: none;
-  transition: all 0.2s ease;
+transition: border-color 0.2s ease;
+    letter-spacing: 0.18px;
 }
 
 .form-group input:focus {
-  border-color: #22c55e;
-  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1);
+border-color: #38BDF8;
 }
 
 .form-group input::placeholder {
-  color: #9ca3af;
+color: rgba(0, 0, 0, 0.4);
 }
 
-.readonly-field {
-  padding: 12px 16px;
-  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+/* Underline Input Style */
+.underline-input {
+    text-transform: uppercase;
+}
+
+/* Readonly Field - Dark Style (Gray Background) */
+.readonly-field-dark {
+    padding: 9px 16px;
+    background: #8C8E8E;
   color: #fff;
-  font-family: "Inter", sans-serif;
-  font-size: 13px;
-  font-weight: 600;
+font-family: "Rubik", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
   border-radius: 8px;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(34, 197, 94, 0.3);
+text-transform: uppercase;
+    letter-spacing: 0.18px;
 }
 
-/* Payment Methods */
-.payment-methods {
+/* ========== PAYMENT METHODS ========== */
+.payment-methods-row {
   display: flex;
-  gap: 12px;
+justify-content: space-between;
+    align-items: center;
+    gap: 16px;
   flex-wrap: wrap;
 }
 
 .payment-method-option {
   display: flex;
   align-items: center;
-  gap: 10px;
-  cursor: pointer;
-  padding: 10px 16px;
-  border: 1px solid #e5e7eb;
-  border-radius: 10px;
-  background: #fff;
-  transition: all 0.2s ease;
-  min-width: max-content;
-}
-
-.payment-method-option:hover {
-  border-color: #22c55e;
-  background: rgba(34, 197, 94, 0.02);
+gap: 8px;
+    cursor: pointer;
 }
 
 .payment-method-option input[type="radio"] {
   display: none;
 }
 
-.payment-method-option:has(input[type="radio"]:checked) {
-  border-color: #22c55e;
-  background: rgba(34, 197, 94, 0.05);
-  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1);
-}
-
-.radio-custom {
-  width: 18px;
-  height: 18px;
-  border: 2px solid #d1d5db;
+/* Radio Circle */
+.radio-circle {
+    width: 17px;
+    height: 17px;
+    border: 2px solid #D9D9D9;
   border-radius: 50%;
   position: relative;
   transition: all 0.2s ease;
   flex-shrink: 0;
 }
 
-.payment-method-option input[type="radio"]:checked + .radio-custom {
-  border-color: #22c55e;
-  border-width: 2px;
+.payment-method-option input[type="radio"]:checked+.radio-circle {
+    border-color: #000;
 }
 
-.payment-method-option input[type="radio"]:checked + .radio-custom::after {
+.payment-method-option input[type="radio"]:checked+.radio-circle::after {
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 10px;
-  height: 10px;
-  background: #22c55e;
+width: 9px;
+    height: 9px;
+    background: #000;
   border-radius: 50%;
 }
 
 .radio-filled {
-  background: #22c55e;
-  border-color: #22c55e;
+background: #000;
+    border-color: #D9D9D9 !important;
+    border-width: 5px !important;
 }
 
-.payment-label {
-  font-family: "Inter", sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  color: #333;
+.radio-filled::after {
+    display: none !important;
 }
 
-.bkash-icon {
+/* Payment Logos */
+.payment-logo {
+    height: 28px;
+    width: auto;
+    object-fit: contain;
+}
+
+.bkash-logo {
+    width: 62px;
+}
+
+.nagad-logo {
+    width: 82px;
+}
+
+/* Visa Mastercard Logos */
+.visa-mastercard-logos {
   display: flex;
   align-items: center;
+gap: 4px;
 }
 
-.bkash-text {
+.visa-logo-text {
   font-family: "Inter", sans-serif;
-  font-size: 14px;
+font-size: 18px;
   font-weight: 700;
-  color: #e2136e;
+font-style: italic;
+    color: #222357;
+    background: linear-gradient(175deg, #222357 0%, #254AA5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-.nagad-icon {
+.mastercard-circles {
+    position: relative;
+    width: 36px;
+    height: 24px;
+}
+
+.mc-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.mc-red {
+    background: #EB001B;
+    left: 0;
+}
+
+.mc-orange {
+    background: #F79E1B;
+    left: 10px;
+}
+
+/* Bank Payment Label */
+.bank-payment-label {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+}
+
+/* ========== BANK SELECTION ========== */
+.bank-selection-row {
   display: flex;
-  align-items: center;
-}
-
-.nagad-text {
-  font-family: "Inter", sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  color: #f6921e;
-}
-
-.card-icons {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.visa-text {
-  font-family: "Inter", sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  font-style: italic;
-  color: #1a1f71;
-}
-
-.mastercard-icon {
-  width: 24px;
-  height: 16px;
-  background: linear-gradient(90deg, #eb001b 0%, #f79e1b 100%);
-  border-radius: 2px;
-}
-
-/* Bank Selection */
-.bank-selection {
-  display: flex;
-  gap: 12px;
-  margin-bottom: 16px;
-  flex-wrap: wrap;
+align-items: center;
+    gap: 32px;
+    margin-bottom: 24px;
 }
 
 .bank-option {
   display: flex;
   align-items: center;
   gap: 8px;
-  cursor: pointer;
-  flex: 1;
-  min-width: 140px;
+cursor: pointer;
 }
 
 .bank-option input[type="radio"] {
   display: none;
 }
 
-.bank-logo-wrapper {
-  padding: 10px 16px;
-  border-radius: 10px;
+.bank-select-logo {
+    height: 28px;
+    width: auto;
+    object-fit: contain;
+}
+
+.dbbl-logo-wrapper {
   display: flex;
-  align-items: center;
-  gap: 8px;
-  border: 1px solid #e5e7eb;
-  background: #fff;
-  transition: all 0.2s ease;
-  width: 100%;
-  justify-content: center;
+align-items: center;
 }
 
-.bank-logo-wrapper:hover {
-  border-color: #22c55e;
-}
-
-.bank-logo-wrapper.islami-bank {
-  background: #fff;
-}
-
-.bank-logo-wrapper.dbbl {
-  background: #fff;
-}
-
-.bank-name {
+.dbbl-text {
   font-family: "Inter", sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  color: #006847;
-}
-
-.bank-name-dbbl {
-  font-family: "Inter", sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  color: #003366;
+font-size: 18px;
+    font-weight: 700;
   background: linear-gradient(90deg, #f7941d, #006838);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.bank-option input[type="radio"]:checked + .bank-logo-wrapper {
-  border-color: #22c55e;
-  background: rgba(34, 197, 94, 0.05);
-  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1);
-}
-
-/* Terms Text */
+/* ========== TERMS & CONFIRM BUTTON ========== */
 .terms-text {
-  font-family: "Inter", sans-serif;
-  font-size: 12px;
-  color: #6b7280;
-  margin: 20px 0;
-  line-height: 1.5;
+font-family: "Rubik", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.4);
+    margin: 24px 0;
+    line-height: 1.4;
+    letter-spacing: 0.18px;
 }
 
-/* Confirm Button */
 .confirm-payment-btn {
   width: 100%;
-  padding: 16px 24px;
-  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+padding: 14px 16px;
+    background: linear-gradient(90deg, #38BDF8 0%, #1E90FF 100%);
   border: none;
-  border-radius: 12px;
+border-radius: 10px;
   color: #fff;
-  font-family: "Inter", sans-serif;
-  font-size: 15px;
-  font-weight: 600;
+font-family: "Rubik", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+letter-spacing: 0.18px;
 }
 
 .confirm-payment-btn:hover:not(:disabled) {
-  background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+background: linear-gradient(90deg, #1E90FF 0%, #0066CC 100%);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
+box-shadow: 0 6px 20px rgba(56, 189, 248, 0.4);
 }
 
 .confirm-payment-btn:active:not(:disabled) {
@@ -437,177 +417,221 @@
 
 .confirm-payment-btn:disabled {
   opacity: 0.6;
-  cursor: not-allowed;
-  transform: none;
+cursor: not-allowed;
 }
 
-/* Right Panel - Payment Summary */
-.payment-summary {
+/* ========== RIGHT PANEL ========== */
+.modal-right-panel {
+    padding: 40px;
+    background: linear-gradient(90deg, rgba(56, 189, 248, 0.11) 0%, rgba(30, 144, 255, 0.11) 100%);
+    border-radius: 0 20px 20px 0;
+}
+
+.panel-title-payment {
+    font-family: "Rubik", sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 32px 0;
+    text-align: center;
+}
+
+/* Payment Summary Header */
+.payment-summary-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 24px;
-  padding: 20px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+margin-bottom: 32px;
 }
 
-.plan-info {
+.plan-info-block {
   flex: 1;
 }
 
-.plan-type {
-  font-family: "Poppins", sans-serif;
-  font-size: 15px;
-  font-weight: 600;
-  color: #1f2937;
-  margin: 0 0 6px 0;
+.subscription-type {
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+    margin: 0 0 4px 0;
 }
 
-.plan-name-row {
-  margin-bottom: 6px;
+.plan-name-line {
+    margin-bottom: 4px;
 }
 
-.plan-label {
+.plan-text {
   font-family: "Inter", sans-serif;
-  font-size: 13px;
-  color: #6b7280;
+font-size: 24px;
+    font-weight: 400;
+    color: #000;
 }
 
-.plan-value {
+.plan-name-value {
   font-family: "Inter", sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  color: #22c55e;
+font-size: 24px;
+    font-weight: 700;
+    color: #3855F8;
+    margin-left: 4px;
 }
 
-.plan-description {
-  font-family: "Inter", sans-serif;
-  font-size: 12px;
-  color: #9ca3af;
+.hosting-note {
+    font-family: "Questrial", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #807F7F;
   margin: 0;
 }
 
-.plan-price {
+.price-large {
   font-family: "Poppins", sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: #1f2937;
+font-size: 32px;
+    font-weight: 500;
+    color: #000;
   white-space: nowrap;
 }
 
-/* Discount Section */
-.discount-section {
-  margin-bottom: 24px;
-}
-
-.discount-input-wrapper {
+/* Discount Input Box */
+.discount-input-box {
   display: flex;
   align-items: center;
   background: #fff;
-  border: 1px solid #e5e7eb;
-  border-radius: 10px;
-  padding: 4px 4px 4px 12px;
-  transition: all 0.2s ease;
-}
-
-.discount-input-wrapper:focus-within {
-  border-color: #22c55e;
-  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1);
-}
+border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 24px;
+    gap: 12px;
 }
 
 .discount-icon {
-  width: 20px;
-  height: 20px;
-  margin-right: 8px;
-  color: #9ca3af;
+width: 24px;
+    height: 24px;
   flex-shrink: 0;
 }
 
-.discount-input {
+.discount-field {
   flex: 1;
   border: none;
   outline: none;
-  font-family: "Inter", sans-serif;
-  font-size: 14px;
+font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
   color: #1f2937;
-  background: transparent;
-  min-width: 0;
+background: transparent;
 }
 
-.discount-input::placeholder {
-  color: #9ca3af;
+.discount-field::placeholder {
+    color: #818EA1;
 }
 
-.apply-btn {
-  padding: 10px 20px;
-  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+.apply-discount-btn {
+    padding: 0;
+    background: none;
   border: none;
-  border-radius: 8px;
-  color: #fff;
-  font-family: "Inter", sans-serif;
-  font-size: 13px;
+color: #38BDF8;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s ease;
-  white-space: nowrap;
+transition: color 0.2s ease;
 }
 
-.apply-btn:hover {
-  background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
-  transform: translateY(-1px);
+.apply-discount-btn:hover {
+    color: #1E90FF;
 }
 
 /* Price Breakdown */
-.price-breakdown {
-  background: #fff;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+.price-breakdown-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
-.price-row {
+.price-line {
   display: flex;
   justify-content: space-between;
-  font-family: "Inter", sans-serif;
-  font-size: 14px;
-  color: #6b7280;
-  margin-bottom: 14px;
+align-items: center;
 }
 
-.discount-amount {
-  color: #22c55e;
-  font-weight: 500;
+.price-label {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #807F7F;
 }
 
-.total-row {
-  font-weight: 600;
-  color: #1f2937;
-  font-size: 16px;
-  margin-top: 16px;
-  margin-bottom: 0;
-  padding-top: 16px;
-  border-top: 2px dashed #e5e7eb;
+.price-value {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
 }
 
-.total-amount {
-  font-size: 20px;
-  font-weight: 700;
-  color: #22c55e;
+.discount-value {
+    color: #000;
 }
 
-/* Responsive */
+.total-line {
+    margin-top: 8px;
+}
+
+.total-label {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+}
+
+.total-value {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    }
+    
+    /* ========== RESPONSIVE ========== */
+    
+    /* Tablet & Medium Screens */
+    @media (max-width: 1024px) {
+        .subscription-modal {
+            max-width: 95%;
+        }
+    
+        .modal-left-panel,
+        .modal-right-panel {
+            padding: 32px;
+        }
+    
+        .panel-title,
+        .panel-title-payment {
+            font-size: 26px;
+            margin-bottom: 28px;
+        }
+    
+        .section-title-main {
+            font-size: 20px;
+            margin-bottom: 18px;
+        }
+                .subscription-type {
+                    font-size: 20px;
+        .plan-text,
+        .plan-name-value {
+            font-size: 20px;
+        
+            .price-large {
+                font-size: 28px;
+            }
+        }
+
+  /* Stack panels vertically on smaller screens */
 @media (max-width: 900px) {
   .subscription-modal-content {
     grid-template-columns: 1fr;
   }
   
   .modal-left-panel {
+    padding: 28px 24px;
     border-right: none;
     border-bottom: 1px solid #e5e7eb;
-    padding: 28px 24px;
   }
   
   .modal-right-panel {
@@ -617,150 +641,310 @@
   
   .form-row.three-cols {
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    }
+    
+    .form-row.two-cols {
+        gap: 20px;
+    }
+    
+    .payment-methods-row {
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: flex-start;
+    }
+    
+    .payment-method-option {
+        padding: 8px 12px;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        background: #fafafa;
+    }
+    
+    .payment-method-option:has(input[type="radio"]:checked) {
+        border-color: #38BDF8;
+        background: rgba(56, 189, 248, 0.05);
+    }
+    
+    .bank-selection-row {
+        gap: 20px;
+    }
+    
+    .bank-option {
+        padding: 8px 12px;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        background: #fafafa;
+    }
+    
+    .bank-option:has(input[type="radio"]:checked) {
+        border-color: #38BDF8;
+        background: rgba(56, 189, 248, 0.05);
+    }
+    
+    .payment-summary-header {
+        gap: 16px;
   }
 }
 
+/* Mobile Screens */
 @media (max-width: 640px) {
   .subscription-modal-overlay {
-    padding: 12px;
+    padding: 10px;
     align-items: flex-start;
-    padding-top: 40px;
+    padding-top: 20px;
   }
   
   .subscription-modal {
     border-radius: 16px;
     max-height: none;
+    max-width: 100%;
   }
   
   .modal-close-btn {
-    top: 8px;
-    right: 8px;
+    top: 10px;
+        right: 10px;
     width: 32px;
     height: 32px;
   }
   
   .modal-left-panel,
   .modal-right-panel {
-    padding: 24px 20px;
+    padding: 24px 18px;
   }
   
-  .panel-title {
-    font-size: 20px;
+  .panel-title,
+  .panel-title-payment {
+      font-size: 22px;
     margin-bottom: 20px;
   }
+.section-title-main {
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+.section-title-sub {
+    font-size: 14px;
+}
   
+  /* Single column for all form rows */
   .form-row.three-cols,
   .form-row.two-cols {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
   
-  .payment-methods {
+  .form-group label {
+      font-size: 14px;
+  }
+
+  .form-group input {
+      font-size: 16px;
+      padding-bottom: 8px;
+  }
+
+  .readonly-field-dark {
+      font-size: 14px;
+      padding: 10px 12px;
+  }
+
+  /* Stack payment methods vertically */
+  .payment-methods-row {
     flex-direction: column;
+    align-items: stretch;
     gap: 10px;
   }
   
   .payment-method-option {
     width: 100%;
     justify-content: flex-start;
+    padding: 12px 16px;
   }
   
-  .bank-selection {
+  /* Stack bank selection vertically */
+  .bank-selection-row {
     flex-direction: column;
+    align-items: stretch;
     gap: 10px;
   }
   
   .bank-option {
-    min-width: 100%;
+    width: 100%;
+        justify-content: flex-start;
+        padding: 12px 16px;
   }
   
-  .payment-summary {
+  /* Payment summary adjustments */
+  .payment-summary-header {
     flex-direction: column;
     gap: 12px;
-    padding: 16px;
   }
   
-  .plan-price {
-    font-size: 22px;
+  .plan-info-block {
+      width: 100%;
   }
   
-  .discount-input-wrapper {
-    flex-wrap: wrap;
+  .subscription-type {
+      font-size: 18px;
   }
   
-  .discount-input {
-    flex: 1 1 100%;
-    padding: 10px 0;
-    min-width: 0;
+  .plan-text,
+  .plan-name-value {
+      font-size: 18px;
   }
   
-  .apply-btn {
-    width: 100%;
-    margin-top: 8px;
+  .price-large {
+      font-size: 26px;
+  }
+
+  .discount-input-box {
     padding: 12px;
+    gap: 8px;
+    }
+    
+    .discount-field {
+        font-size: 14px;
+    }
+    
+    .apply-discount-btn {
+        font-size: 14px;
+    }
+    
+    .price-label,
+    .price-value {
+        font-size: 14px;
+    }
+    
+    .total-label,
+    .total-value {
+        font-size: 18px;
   }
   
-  .price-breakdown {
-    padding: 16px;
+  .terms-text {
+      font-size: 14px;
+      margin: 20px 0;
   }
   
   .confirm-payment-btn {
     padding: 14px 20px;
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
+/* Extra Small Mobile Screens */
 @media (max-width: 400px) {
   .subscription-modal-overlay {
-    padding: 8px;
+    padding: 6px;
+        padding-top: 10px;
   }
   
   .modal-left-panel,
   .modal-right-panel {
-    padding: 20px 16px;
+    padding: 18px 14px;
   }
   
-  .panel-title {
-    font-size: 18px;
+  .panel-title,
+  .panel-title-payment {
+      font-size: 20px;
+      margin-bottom: 16px;
   }
   
-  .section-title {
-    font-size: 12px;
+  .section-title-main {
+      font-size: 16px;
+      margin-bottom: 14px;
+  }
+
+  .form-group label {
+      font-size: 13px;
   }
   
   .form-group input {
-    padding: 10px 12px;
+    font-size: 15px;
+    }
+    
+    .readonly-field-dark {
     font-size: 13px;
+    padding: 8px 10px;
   }
   
-  .form-group label {
-    font-size: 10px;
+  .subscription-type {
+      font-size: 16px;
   }
   
-  .plan-type {
-    font-size: 14px;
+  .plan-text,
+  .plan-name-value {
+      font-size: 16px;
   }
   
-  .plan-price {
-    font-size: 20px;
+  .price-large {
+      font-size: 22px;
   }
   
-  .total-amount {
-    font-size: 18px;
+  .hosting-note {
+      font-size: 12px;
+  }
+
+  .terms-text {
+      font-size: 13px;
+  }
+
+  .confirm-payment-btn {
+      padding: 12px 16px;
+      font-size: 15px;
   }
 }
 
 /* Touch device optimizations */
 @media (hover: none) and (pointer: coarse) {
   .payment-method-option,
-  .bank-logo-wrapper,
-  .form-group input,
-  .confirm-payment-btn,
-  .apply-btn {
+.bank-option {
     min-height: 48px;
   }
   
+  .form-group input {
+      min-height: 44px;
+      font-size: 16px;
+      /* Prevents zoom on iOS */
+  }
+
+  .confirm-payment-btn {
+      min-height: 50px;
+  }
+
+  .apply-discount-btn {
+      min-height: 44px;
+      padding: 8px 16px;
+  }
   .modal-close-btn {
     width: 44px;
     height: 44px;
   }
+  .discount-input-box {
+      min-height: 52px;
+  }
+  }
+
+  /* Landscape orientation on mobile */
+  @media (max-width: 900px) and (orientation: landscape) {
+      .subscription-modal-overlay {
+          align-items: flex-start;
+          padding-top: 10px;
+      }
+
+      .subscription-modal {
+          max-height: none;
+      }
+
+      .subscription-modal-content {
+          grid-template-columns: 1fr 1fr;
+      }
+
+      .modal-right-panel {
+          border-radius: 0 20px 20px 0;
+      }
+
+      .modal-left-panel {
+          border-bottom: none;
+          border-right: 1px solid #e5e7eb;
+      }
 }
