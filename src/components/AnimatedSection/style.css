@@ -1,0 +1,85 @@
+/* AnimatedSection Styles */
+
+.animated-section {
+  will-change: opacity, transform;
+}
+
+/* Base animation states */
+.animated-fade,
+.animated-slide-up,
+.animated-slide-down,
+.animated-slide-left,
+.animated-slide-right,
+.animated-scale {
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-duration: var(--animation-duration, 600ms);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: var(--animation-delay, 0ms);
+}
+
+.animated-slide-up {
+  transform: translateY(40px);
+}
+
+.animated-slide-down {
+  transform: translateY(-40px);
+}
+
+.animated-slide-left {
+  transform: translateX(-40px);
+}
+
+.animated-slide-right {
+  transform: translateX(40px);
+}
+
+.animated-scale {
+  transform: scale(0.95);
+}
+
+/* Visible state */
+.animated-section.is-visible {
+  opacity: 1;
+  transform: translateY(0) translateX(0) scale(1);
+}
+
+/* Staggered Items */
+.staggered-item {
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: var(--stagger-delay, 0ms);
+}
+
+.staggered-item.slide-up {
+  transform: translateY(30px);
+}
+
+.staggered-item.slide-left {
+  transform: translateX(-30px);
+}
+
+.staggered-item.slide-right {
+  transform: translateX(30px);
+}
+
+.staggered-item.scale {
+  transform: scale(0.9);
+}
+
+.staggered-item.is-visible {
+  opacity: 1;
+  transform: translateY(0) translateX(0) scale(1);
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .animated-section,
+  .staggered-item {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

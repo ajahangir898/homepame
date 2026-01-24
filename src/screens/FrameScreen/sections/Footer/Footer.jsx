@@ -31,6 +31,7 @@ export const Footer = () => {
               src="https://c.animaapp.com/6PVGKTMi/img/group-2036@2x.png"
               alt="System Next IT"
             />
+            <p className="footer-tagline">Innovation & Technology</p>
           </div>
 
           {/* Links Section */}
@@ -39,7 +40,6 @@ export const Footer = () => {
               <h4 className="footer-title">Company</h4>
               <a href="#" className="footer-link">About</a>
               <a href="#contact" className="footer-link">Contact</a>
-              <a href="#" className="footer-link">Blogs</a>
             </div>
 
             <div className="footer-column">
@@ -52,8 +52,9 @@ export const Footer = () => {
 
             <div className="footer-column">
               <h4 className="footer-title">Quick Links</h4>
-              <a href="#" className="footer-link">Forum</a>
-              <a href="#" className="footer-link">Downloads</a>
+              <a href="#" className="footer-link">SaaS Subscription</a>
+              <a href="#" className="footer-link">Website Building</a>
+              <a href="#" className="footer-link">Service & Technology</a>
             </div>
           </div>
 

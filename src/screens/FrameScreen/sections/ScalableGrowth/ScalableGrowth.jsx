@@ -1,19 +1,31 @@
 import { memo } from "react";
 import "./style.css";
 
-const RadioIcon = ({ color = "#15803d", filled = false, theme = "green" }) => {
+const RadioIcon = ({ theme = "green" }) => {
   if (theme === "green") {
     return (
-      <img 
-        src="https://hdnfltv.com/image/nitimages/check-circle__4_.webp" 
-        alt="radio" 
-        className="scalable-radio-icon-img"
-      />
+      <div className="radio-icon radio-icon-green">
+        <div className="radio-inner"></div>
+      </div>
+    );
+  }
+  if (theme === "orange") {
+    return (
+      <div className="radio-icon radio-icon-orange">
+        <div className="radio-inner"></div>
+      </div>
+    );
+  }
+  if (theme === "blue") {
+    return (
+      <div className="radio-icon radio-icon-blue">
+        <div className="radio-inner"></div>
+      </div>
     );
   }
   return (
-    <div className="radio-icon" style={{ borderColor: color }}>
-      {filled && <div className="radio-filled" style={{ backgroundColor: color }}></div>}
+    <div className="radio-icon radio-icon-green">
+      <div className="radio-inner"></div>
     </div>
   );
 };
@@ -28,17 +40,11 @@ const WebsiteCard = memo(({ card }) => (
     <ul className="website-card-features">
       {card.features.map((feature, index) => (
         <li key={index} className="website-feature-item">
-          <RadioIcon color={card.radioColor} theme={card.theme} filled={card.theme === 'blue' && index === card.features.length - 1} />
+          <RadioIcon theme={card.theme} />
           <span>{feature}</span>
         </li>
       ))}
     </ul>
-    
-    <p className="hosting-note">Hosting charges will add on your storage requirements.</p>
-    
-    <button className={`website-card-btn website-card-btn-${card.theme}`}>
-      {card.btnText}
-    </button>
   </div>
 ));
 
@@ -117,9 +123,9 @@ export const ScalableGrowth = memo(() => {
         <div className="scalable-growth-header">
           <span className="scalable-growth-label">CHOOSE YOUR PLAN</span>
           <h2 className="scalable-growth-title">
-            <span className="text-orange">Scalable</span>
-            <span className="text-slate"> Digital</span>
-            <span className="text-sky"> Growth</span>
+            <span className="text-orange-italic">Scalable</span>
+            <span className="text-dark"> Digital </span>
+            <span className="text-cyan">Growth</span>
           </h2>
           <p className="scalable-growth-subtitle">
             Conversion-optimized websites and data-driven marketing designed to grow your revenue and brand.

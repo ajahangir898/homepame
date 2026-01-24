@@ -36,6 +36,18 @@
   line-height: 1.15;
 }
 
+.text-orange-italic {
+  color: #f97316;
+  font-style: italic;
+}
+
+.text-dark {
+  color: #0f172a;
+}
+
+.text-cyan {
+  color: #06b6d4;
+}
 .text-orange {
   color: #f97316;
 }
@@ -123,22 +135,32 @@
 }
 
 .radio-icon {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+    height: 20px;
   border-radius: 50%;
-  border: 1px solid currentColor;
+  border: 2px solid currentColor;
   background: #fff;
   flex-shrink: 0;
-  margin-top: 3px;
+  margin-top: 2px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.radio-filled {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
+.radio-icon-green {
+  border-color: #15803d;
+}
+
+.radio-icon-orange {
+  border-color: #f97316;
+}
+
+.radio-icon-blue {
+  border-color: #2563eb;
+}
+
+.radio-inner {
+  display: none;
 }
 
 .scalable-radio-icon-img {

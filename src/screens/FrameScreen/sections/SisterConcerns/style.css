@@ -1,0 +1,144 @@
+.sister-concerns-section {
+  width: 100%;
+  padding: 80px 20px;
+  background: #fffdfd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.sister-concerns-container {
+  width: 100%;
+  max-width: 1143px;
+  min-height: 320px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sister-concerns-inner {
+  width: 384px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+}
+
+.sister-concerns-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  width: 100%;
+}
+
+.sister-concerns-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #000000;
+  margin: 0;
+}
+
+.sister-concerns-subtitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #707070;
+  margin: 0;
+  text-align: center;
+}
+
+.sister-concerns-logo-wrapper {
+  width: 224px;
+  height: 192px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.sister-logo-main {
+  width: 224px;
+  height: 96px;
+  object-fit: contain;
+}
+
+.sister-logo-text {
+  width: 92px;
+  height: 92px;
+  object-fit: contain;
+}
+
+.sister-website-link {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #0189C5;
+  text-decoration: none;
+  text-align: center;
+  transition: color 0.2s ease;
+  width: 100%;
+}
+
+.sister-website-link:hover {
+  color: #38bdf8;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sister-concerns-section {
+    padding: 60px 20px;
+  }
+
+  .sister-concerns-inner {
+    width: 100%;
+    gap: 48px;
+  }
+
+  .sister-concerns-subtitle {
+    font-size: 16px;
+  }
+
+  .sister-logo-main {
+    width: 180px;
+    height: 80px;
+  }
+
+  .sister-logo-text {
+    width: 75px;
+    height: 75px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sister-concerns-section {
+    padding: 48px 16px;
+  }
+
+  .sister-concerns-inner {
+    gap: 32px;
+  }
+
+  .sister-concerns-subtitle {
+    font-size: 14px;
+  }
+
+  .sister-logo-main {
+    width: 150px;
+    height: 66px;
+  }
+
+  .sister-logo-text {
+    width: 60px;
+    height: 60px;
+  }
+
+  .sister-website-link {
+    font-size: 16px;
+  }
+}

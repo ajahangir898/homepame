@@ -1,0 +1,260 @@
+.simple-steps-section {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 60px 80px;
+  background: #ffffff;
+}
+
+.simple-steps-container {
+  max-width: 1143px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+
+/* Header Styles */
+.simple-steps-header {
+  text-align: center;
+  max-width: 965px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.simple-steps-title {
+  font-family: "Roboto", Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 1.2;
+  color: #000000;
+  margin: 0;
+}
+
+.simple-steps-subtitle {
+  font-family: "Poppins", Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.55;
+  color: #525252;
+  margin: 0;
+  max-width: 946px;
+}
+
+/* Steps Grid */
+.simple-steps-grid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 32px;
+  width: 100%;
+}
+
+/* Step Card */
+.simple-step-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 384px;
+}
+
+/* Step Badge - positioned above card */
+.simple-step-badge {
+  width: 64px;
+  height: 24px;
+  background: linear-gradient(180deg, rgba(249, 115, 22, 0.1) 0%, rgba(245, 158, 11, 0.1) 100%);
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.simple-step-badge span {
+  font-family: "Poppins", Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #f97316;
+}
+
+.simple-step-card-content {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  background: #FFF9F2;
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.simple-step-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: auto;
+}
+
+.simple-step-card-title {
+  font-family: "Poppins", Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.4;
+  color: #454452;
+  margin: 0;
+}
+
+.simple-step-card-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.simple-step-card-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.simple-step-card-description {
+  font-family: "Poppins", Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #454452;
+  margin: 0;
+  max-width: 320px;
+  margin-top: auto;
+}
+
+/* CTA Buttons */
+.simple-steps-cta {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.simple-steps-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  min-width: 160px;
+  border-radius: 88px;
+  border: none;
+  font-family: "Roboto", Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+/* Primary Button - Book a Call */
+.simple-steps-btn-primary {
+  background: linear-gradient(135deg, #f97316 0%, #f59e0b 100%);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+}
+
+.simple-steps-btn-primary:hover {
+  background: linear-gradient(135deg, #ea580c 0%, #d97706 100%);
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 12px 0px rgba(249, 115, 22, 0.4);
+}
+
+/* Secondary Button - View Pricing */
+.simple-steps-btn-secondary {
+  background: transparent;
+  border: 2px solid #f97316;
+  color: #f97316;
+  box-shadow: none;
+}
+
+.simple-steps-btn-secondary:hover {
+  background: rgba(249, 115, 22, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 8px 0px rgba(249, 115, 22, 0.2);
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .simple-steps-section {
+    padding: 50px 40px;
+  }
+  
+  .simple-steps-title {
+    font-size: 48px;
+  }
+  
+  .simple-step-card {
+    width: 320px;
+  }
+  
+  .simple-steps-grid {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .simple-steps-title {
+    font-size: 40px;
+  }
+  
+  .simple-step-card {
+    width: 280px;
+  }
+  
+  .simple-step-card-content {
+    height: auto;
+    min-height: 160px;
+  }
+}
+
+@media (max-width: 900px) {
+  .simple-steps-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .simple-step-card {
+    width: 100%;
+    max-width: 384px;
+  }
+}
+
+@media (max-width: 768px) {
+  .simple-steps-section {
+    padding: 40px 20px;
+  }
+  
+  .simple-steps-title {
+    font-size: 32px;
+  }
+  
+  .simple-steps-subtitle {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .simple-steps-title {
+    font-size: 28px;
+  }
+  
+  .simple-step-card-title {
+    font-size: 18px;
+  }
+  
+  .simple-step-card-description {
+    font-size: 13px;
+  }
+}

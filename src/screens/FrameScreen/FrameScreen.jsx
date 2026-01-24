@@ -1,17 +1,20 @@
 import { useState, useEffect, Suspense, lazy } from "react";
 import { PageSkeleton, HeroSkeleton, ServicesSkeleton, ContactSkeleton, FooterSkeleton } from "../../components/Skeleton";
 import { preloadImages } from "../../components/LazyImage";
+import { AnimatedSection } from "../../components/AnimatedSection";
 import "./style.css";
 
 // Lazy load sections for better performance
 const Frame = lazy(() => import("./sections/Frame").then(m => ({ default: m.Frame })));
 const OnlineStoreShowcase = lazy(() => import("./sections/OnlineStoreShowcase").then(m => ({ default: m.OnlineStoreShowcase })));
+const BusinessFeatures = lazy(() => import("./sections/BusinessFeatures").then(m => ({ default: m.BusinessFeatures })));
+const SimpleSteps = lazy(() => import("./sections/SimpleSteps").then(m => ({ default: m.SimpleSteps })));
 const FrameWrapper = lazy(() => import("./sections/FrameWrapper").then(m => ({ default: m.FrameWrapper })));
 const Pricing = lazy(() => import("./sections/Pricing").then(m => ({ default: m.Pricing })));
-const ScalableGrowth = lazy(() => import("./sections/ScalableGrowth").then(m => ({ default: m.ScalableGrowth })));
 const EmpoweringTech = lazy(() => import("./sections/EmpoweringTech").then(m => ({ default: m.EmpoweringTech })));
 const Group = lazy(() => import("./sections/Group").then(m => ({ default: m.Group })));
 const Footer = lazy(() => import("./sections/Footer").then(m => ({ default: m.Footer })));
+const SisterConcerns = lazy(() => import("./sections/SisterConcerns").then(m => ({ default: m.SisterConcerns })));
 
 // Critical images to preload
 const CRITICAL_IMAGES = [
@@ -45,48 +48,59 @@ export const FrameScreen = () => {
         <Frame />
       </Suspense>
 
-      <Suspense fallback={<ServicesSkeleton />}>
-        <OnlineStoreShowcase />
-      </Suspense>
+      <AnimatedSection animation="slide-up" delay={0}>
+        <Suspense fallback={<ServicesSkeleton />}>
+          <OnlineStoreShowcase />
+        </Suspense>
+      </AnimatedSection>
+
+      <AnimatedSection animation="slide-up" delay={100}>
+        <Suspense fallback={<ServicesSkeleton />}>
+          <BusinessFeatures />
+        </Suspense>
+      </AnimatedSection>
+
+      <AnimatedSection animation="slide-up" delay={100}>
+        <Suspense fallback={<ServicesSkeleton />}>
+          <SimpleSteps />
+        </Suspense>
+      </AnimatedSection>
+
+      <AnimatedSection animation="fade" delay={100}>
+        <Suspense fallback={<ServicesSkeleton />}>
+          <Pricing />
+        </Suspense>
+      </AnimatedSection>
+
+      <AnimatedSection animation="slide-up" delay={100}>
+        <Suspense fallback={<ServicesSkeleton />}>
+          <EmpoweringTech />
+        </Suspense>
+      </AnimatedSection>
+
+      <AnimatedSection animation="scale" delay={100}>
+        <Suspense fallback={<ServicesSkeleton />}>
+          <FrameWrapper />
+        </Suspense>
+      </AnimatedSection>
+
+      <AnimatedSection animation="slide-up" delay={100}>
+        <Suspense fallback={<ServicesSkeleton />}>
+          <SisterConcerns />
+        </Suspense>
+      </AnimatedSection>
+
+      <AnimatedSection animation="slide-up" delay={100}>
+        <Suspense fallback={<ContactSkeleton />}>
+          <Group />
+        </Suspense>
+      </AnimatedSection>
       
-      <Suspense fallback={<ServicesSkeleton />}>
-        <FrameWrapper />
-      </Suspense>
-
-      <Suspense fallback={<ServicesSkeleton />}>
-        <Pricing />
-      </Suspense>
-
-      <Suspense fallback={<ServicesSkeleton />}>
-        <ScalableGrowth />
-      </Suspense>
-
-      <Suspense fallback={<ServicesSkeleton />}>
-        <EmpoweringTech />
-      </Suspense>
-      
-      {/* <section className="rocket-section">
-        <img
-          className="rocket-bg"
-          alt="Rocket Background"
-          src="https://c.animaapp.com/6PVGKTMi/img/group-427320681.png"
-          loading="lazy"
-        />
-        <img
-          className="rocket-icon"
-          alt="Rocket Launch"
-          src="https://c.animaapp.com/6PVGKTMi/img/material-symbols-light-rocket-launch-outline.svg"
-          loading="lazy"
-        />
-      </section> */}
-
-      <Suspense fallback={<ContactSkeleton />}>
-        <Group />
-      </Suspense>
-      
-      <Suspense fallback={<FooterSkeleton />}>
-        <Footer />
-      </Suspense>
+      <AnimatedSection animation="fade" delay={200}>
+        <Suspense fallback={<FooterSkeleton />}>
+          <Footer />
+        </Suspense>
+      </AnimatedSection>
     </div>
   );
 };

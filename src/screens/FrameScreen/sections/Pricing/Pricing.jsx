@@ -1,4 +1,5 @@
-import { memo } from "react";
+import { memo, useState } from "react";
+import { SubscriptionModal } from "../../../../components/SubscriptionModal";
 import "./style.css";
 
 const CheckIcon = ({ color = "#15803d", theme = "green" }) => {
@@ -45,7 +46,7 @@ const CheckIcon = ({ color = "#15803d", theme = "green" }) => {
   );
 };
 
-const PricingCard = memo(({ plan }) => (
+const PricingCard = memo(({ plan, onSubscribe }) => (
   <div className={`pricing-card pricing-card-${plan.theme}`}>
     <div className="pricing-card-header">
       <div className="pricing-card-title-section">
@@ -80,7 +81,10 @@ const PricingCard = memo(({ plan }) => (
       </ul>
     </div>
     
-    <button className={`pricing-subscribe-btn pricing-subscribe-btn-${plan.theme}`}>
+    <button 
+      className={`pricing-subscribe-btn pricing-subscribe-btn-${plan.theme}`}
+      onClick={() => onSubscribe(plan)}
+    >
       SUBSCRIBE NOW
     </button>
   </div>
@@ -89,6 +93,19 @@ const PricingCard = memo(({ plan }) => (
 PricingCard.displayName = "PricingCard";
 
 export const Pricing = memo(() => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedPlan, setSelectedPlan] = useState(null);
+
+  const handleSubscribe = (plan) => {
+    setSelectedPlan(plan);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedPlan(null);
+  };
+
   const plans = [
     {
       name: "Startup",
@@ -191,10 +208,16 @@ export const Pricing = memo(() => {
         
         <div className="pricing-cards-grid">
           {plans.map((plan, index) => (
-            <PricingCard key={index} plan={plan} />
+            <PricingCard key={index} plan={plan} onSubscribe={handleSubscribe} />
           ))}
         </div>
       </div>
+
+      <SubscriptionModal 
+        isOpen={isModalOpen} 
+        onClose={handleCloseModal} 
+        plan={selectedPlan} 
+      />
     </section>
   );
 });

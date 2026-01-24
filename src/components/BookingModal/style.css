@@ -13,187 +13,566 @@
   backdrop-filter: blur(4px);
 }
 
-.booking-modal {
+/* New Modal Design */
+.booking-modal-new {
   background: #ffffff;
-  border-radius: 16px;
+  border-radius: 32px;
   width: 100%;
-  max-width: 600px;
+  max-width: 700px;
   max-height: 90vh;
   overflow-y: auto;
   position: relative;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   animation: modalSlideIn 0.3s ease-out;
+  padding: 24px 48px 48px;
+  }
+  
+  .booking-modal-new.appointment-mode {
+    max-width: 1096px;
 }
 
 @keyframes modalSlideIn {
   from {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(-20px) scale(0.95);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
 }
 
-.modal-close {
+/* Close Button - New */
+.modal-close-new {
   position: absolute;
   top: 16px;
   right: 16px;
-  width: 36px;
-  height: 36px;
+  width: 44px;
+    height: 44px;
   border: none;
-  background: #f3f4f6;
-  border-radius: 50%;
+  background: transparent;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.2s ease;
   z-index: 10;
+  padding: 0;
 }
 
-.modal-close:hover {
-  background: #e5e7eb;
+.modal-close-new:hover {
   transform: rotate(90deg);
 }
 
-.modal-close svg {
-  width: 20px;
-  height: 20px;
-  color: #6b7280;
+.modal-close-new svg {
+  width: 44px;
+  height: 44px;
 }
 
-.modal-header {
-  padding: 32px 32px 0;
-  text-align: center;
+/* Tab Switcher */
+.modal-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 48px;
+  padding-top: 10px;
 }
 
-.modal-title {
-  font-family: "Poppins", Helvetica;
-  font-size: 28px;
-  font-weight: 700;
-  color: #111827;
-  margin: 0 0 8px 0;
+.modal-tab {
+  width: 288px;
+  height: 56px;
+  border-radius: 40px;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: transparent;
+  color: #000000;
 }
 
-.modal-subtitle {
-  font-family: "Poppins", Helvetica;
-  font-size: 16px;
-  color: #6b7280;
-  margin: 0;
+.modal-tab.active {
+  background: linear-gradient(90deg, #38bdf8 0%, #3b82f6 100%);
+  color: #ffffff;
 }
 
-.booking-form {
-  padding: 24px 32px 32px;
+.modal-tab:not(.active):hover {
+  background: rgba(56, 189, 248, 0.1);
+}
+
+/* Form - New */
+.booking-form-new {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 56px;
+    max-width: 736px;
+    margin: 0 auto;
 }
 
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+/* Calendar & Time Slots Row */
+.calendar-time-row {
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+.vertical-divider {
+  width: 1px;
+  height: 384px;
+  background: #d1d5db;
+  flex-shrink: 0;
+}
+
+/* Calendar Section */
+.calendar-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
   gap: 16px;
 }
 
-.form-group {
+.calendar-nav {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.calendar-nav.prev {
+  background: rgba(4, 67, 67, 0.1);
+}
+
+.calendar-nav.next {
+  background: #044343;
+}
+
+.calendar-nav:hover {
+  transform: scale(1.1);
+}
+
+.calendar-month {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  color: #044343;
+  letter-spacing: -0.02em;
+}
+
+.calendar-grid {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
 }
 
-.form-group label {
-  font-family: "Poppins", Helvetica;
+.calendar-day-labels {
+  display: grid;
+  grid-template-columns: repeat(7, 48px);
+  gap: 8px;
+}
+
+.day-label {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Lexend Deca", sans-serif;
   font-size: 14px;
+  font-weight: 400;
+    color: #525252;
+  }
+  
+  .calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 48px);
+    gap: 8px;
+  }
+  
+  .calendar-day {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: default;
+  }
+  
+  .calendar-day.empty {
+    background: transparent;
+  }
+  
+  .calendar-day.disabled {
+    color: #d4d4d4;
+  }
+  
+  .calendar-day.clickable {
+    cursor: pointer;
+    color: #044343;
+  }
+  
+  .calendar-day.clickable .day-bg {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: rgba(4, 67, 67, 0.1);
+    border-radius: 50%;
+    z-index: 0;
+  }
+  
+  .calendar-day.clickable span {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .calendar-day.clickable:hover .day-bg {
+    background: rgba(4, 67, 67, 0.2);
+  }
+  
+  .calendar-day.selected .day-bg {
+    background: #044343 !important;
+  }
+  
+  .calendar-day.selected {
+    color: #ffffff;
+  }
+  
+  .calendar-day.today .today-dot {
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 4px;
+    background: #d4d4d4;
+    border-radius: 50%;
+  }
+  
+  /* Time Slots Section */
+  .time-slots-section {
+    width: 256px;
+    padding: 8px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .selected-date-display {
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #18181b;
+  }
+  
+  .time-slots-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .time-slot {
+    width: 100%;
+    padding: 16px;
+    background: #ffffff;
+    border: 1px solid rgba(4, 67, 67, 0.3);
+    border-radius: 10px;
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(4, 67, 67, 0.3);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+  }
+  
+  .time-slot:hover {
+    border-color: #044343;
+    color: #044343;
+  }
+  
+  .time-slot.selected {
+    background: #044343;
+    border-color: #044343;
+    color: #ffffff;
+  }
+  
+  .custom-time-slot {
+    width: 100%;
+  }
+  
+  .custom-time-input {
+    width: 100%;
+    padding: 16px;
+    background: #ffffff;
+    border: 1px solid rgba(4, 67, 67, 0.3);
+    border-radius: 10px;
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #18181b;
+    text-align: center;
+    outline: none;
+  }
+  
+  .custom-time-input::placeholder {
+    color: rgba(4, 67, 67, 0.3);
+  }
+  
+  .custom-time-input:focus {
+    border-color: #044343;
+  }
+  
+  /* Form & Connect Row */
+  .form-connect-row {
+    display: flex;
+    gap: 48px;
+    align-items: flex-start;
+  }
+  
+  .form-fields-column {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    flex: 1;
+    max-width: 420px;
+  }
+  
+  /* Connect Section */
+  .connect-section {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .connect-title {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
   font-weight: 500;
-  color: #374151;
+  color: #18181b;
+    margin: 0;
+  }
+  
+  .connect-options {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .connect-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+  }
+  
+  .connect-option input[type="radio"] {
+    display: none;
 }
 
-.form-group input,
-.form-group select,
-.form-group textarea {
-  font-family: "Poppins", Helvetica;
-  font-size: 14px;
-  padding: 12px 14px;
-  border: 1px solid #d1d5db;
-  border-radius: 8px;
-  outline: none;
+.radio-custom {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #d6d3d1;
+  border-radius: 50%;
+  position: relative;
   transition: all 0.2s ease;
+  flex-shrink: 0;
+  }
+  
+  .connect-option input[type="radio"]:checked+.radio-custom {
+    border-color: #044343;
+  }
+  
+  .connect-option input[type="radio"]:checked+.radio-custom::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    background: #044343;
+    border-radius: 50%;
+  }
+  
+  .connect-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  .connect-icon.zoom svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .connect-icon.location svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .connect-label {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #18181b;
+    line-height: 20px;
+  }
+  
+  /* Form Field - New */
+  .form-field-new {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Floating Label - New */
+  .floating-label-new {
+    position: absolute;
+    top: -14px;
+    left: 15px;
+    padding: 0 6px;
+    background: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #18181b;
+    z-index: 1;
+  }
+  
+  /* Input Wrapper - New */
+  .input-wrapper-new {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
   background: #ffffff;
+  border: 1px solid #d6d3d1;
+    border-radius: 10px;
+    transition: all 0.2s ease;
 }
 
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-  border-color: #ff6b00;
-  box-shadow: 0 0 0 3px rgba(255, 107, 0, 0.1);
+.input-wrapper-new:focus-within {
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.1);
 }
 
-.form-group input.error,
-.form-group select.error {
+.input-wrapper-new.error {
   border-color: #ef4444;
 }
 
-.form-group textarea {
-  resize: vertical;
-  min-height: 80px;
+/* Input Icon */
+.input-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
 }
 
-.form-group select {
-  cursor: pointer;
-  appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 12px center;
-  padding-right: 40px;
+/* Input Divider */
+.input-divider {
+  width: 1px;
+  height: 24px;
+  background: #d1d5db;
+  flex-shrink: 0;
 }
 
-.error-text {
-  font-family: "Poppins", Helvetica;
+/* Input Field */
+.input-wrapper-new input,
+.input-wrapper-new select {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #18181b;
+  background: transparent;
+  line-height: 16px;
+}
+
+.input-wrapper-new input::placeholder {
+  color: #18181b;
+}
+
+/* Form Row - New */
+.form-row-new {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+/* Error Text - New */
+.error-text-new {
+  font-family: "Poppins", sans-serif;
   font-size: 12px;
   color: #ef4444;
+  margin-top: 4px;
 }
 
-.error-alert {
+/* Error Alert - New */
+.error-alert-new {
   background: #fef2f2;
   color: #dc2626;
   padding: 12px 16px;
-  border-radius: 8px;
-  font-family: "Poppins", Helvetica;
+  border-radius: 10px;
+    font-family: "Poppins", sans-serif;
   font-size: 14px;
   border: 1px solid #fecaca;
 }
 
-.submit-btn {
-  background: linear-gradient(135deg, #ff6b00 0%, #ff8533 100%);
+/* Submit Button - New */
+.submit-btn-new {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(90deg, #38bdf8 0%, #3b82f6 100%);
+  border: 1px solid transparent;
+  border-radius: 8px;
   color: #ffffff;
-  font-family: "Poppins", Helvetica;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: 600;
-  padding: 14px 24px;
-  border: none;
-  border-radius: 8px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
   transition: all 0.3s ease;
-  margin-top: 8px;
 }
 
-.submit-btn:hover:not(:disabled) {
+.submit-btn-new:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(255, 107, 0, 0.3);
+  box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3);
 }
 
-.submit-btn:disabled {
+.submit-btn-new:disabled {
   opacity: 0.7;
   cursor: not-allowed;
 }
 
-.spinner {
+/* Spinner - New */
+.spinner-new {
   width: 20px;
   height: 20px;
   border: 2px solid rgba(255, 255, 255, 0.3);
@@ -208,7 +587,49 @@
   }
 }
 
-.booking-success {
+/* Note Section */
+.note-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.note-title {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: #18181b;
+  margin: 0;
+}
+
+.note-wrapper {
+  background: #ffffff;
+  border: 1px solid #d6d3d1;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.note-wrapper textarea {
+  width: 100%;
+  padding: 20px;
+  border: none;
+  outline: none;
+  resize: none;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #18181b;
+  line-height: 16px;
+  min-height: 112px;
+  background: transparent;
+}
+
+.note-wrapper textarea::placeholder {
+  color: #d6d3d1;
+}
+
+/* Success State - New */
+.booking-success-new {
   padding: 48px 32px;
   text-align: center;
   display: flex;
@@ -217,46 +638,136 @@
   gap: 16px;
 }
 
-.success-icon {
+.success-icon-new {
   width: 64px;
   height: 64px;
 }
 
-.booking-success h3 {
-  font-family: "Poppins", Helvetica;
+.booking-success-new h3 {
+  font-family: "Poppins", sans-serif;
   font-size: 24px;
   font-weight: 600;
   color: #111827;
   margin: 0;
 }
 
-.booking-success p {
-  font-family: "Poppins", Helvetica;
+.booking-success-new p {
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   color: #6b7280;
   margin: 0;
 }
 
 /* Responsive */
-@media (max-width: 640px) {
-  .booking-modal {
+@media (max-width: 1100px) {
+  .booking-modal-new.appointment-mode {
+    max-width: 95vw;
+  }
+
+  .calendar-time-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .vertical-divider {
+    width: 100%;
+    height: 1px;
+  }
+
+  .form-connect-row {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .form-fields-column {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .booking-modal-new {
     max-height: 95vh;
+    padding: 20px 24px 32px;
+      border-radius: 24px;
+    }
+    
+    .modal-tabs {
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+    
+    .modal-tab {
+      width: 100%;
+      height: 48px;
+      font-size: 16px;
+    }
+    
+    .booking-form-new {
+      gap: 32px;
+    }
+    
+    .calendar-days {
+      grid-template-columns: repeat(7, 40px);
+      gap: 4px;
+    }
+    
+    .calendar-day-labels {
+      grid-template-columns: repeat(7, 40px);
+      gap: 4px;
+    }
+    
+    .calendar-day,
+    .day-label {
+      width: 40px;
+      height: 40px;
+      font-size: 14px;
+    }
+    
+    .calendar-day.clickable .day-bg {
+      width: 32px;
+      height: 32px;
+    }
+    
+    .time-slots-section {
+      width: 100%;
+    }
+    
+    .floating-label-new {
+      font-size: 14px;
+    }
+    }
+    
+    @media (max-width: 480px) {
+      .booking-modal-new {
+        padding: 16px 16px 24px;
+      }
+    
+      .modal-close-new {
+        top: 8px;
+        right: 8px;
+        width: 36px;
+        height: 36px;
   }
 
-  .modal-header {
-    padding: 24px 20px 0;
+    .modal-close-new svg {
+      width: 36px;
+      height: 36px;
   }
 
-  .modal-title {
-    font-size: 24px;
+    .calendar-days {
+      grid-template-columns: repeat(7, 36px);
   }
 
-  .booking-form {
-    padding: 20px;
+    .calendar-day-labels {
+      grid-template-columns: repeat(7, 36px);
   }
 
-  .form-row {
-    grid-template-columns: 1fr;
-    gap: 16px;
+    .calendar-day,
+    .day-label {
+      width: 36px;
+      height: 36px;
+      font-size: 12px;
   }
 }
