@@ -5,6 +5,7 @@ import "./style.css";
 
 // Lazy load sections for better performance
 const Frame = lazy(() => import("./sections/Frame").then(m => ({ default: m.Frame })));
+const OnlineStoreShowcase = lazy(() => import("./sections/OnlineStoreShowcase").then(m => ({ default: m.OnlineStoreShowcase })));
 const FrameWrapper = lazy(() => import("./sections/FrameWrapper").then(m => ({ default: m.FrameWrapper })));
 const Pricing = lazy(() => import("./sections/Pricing").then(m => ({ default: m.Pricing })));
 const ScalableGrowth = lazy(() => import("./sections/ScalableGrowth").then(m => ({ default: m.ScalableGrowth })));
@@ -42,6 +43,10 @@ export const FrameScreen = () => {
     <div className="frame-screen">
       <Suspense fallback={<HeroSkeleton />}>
         <Frame />
+      </Suspense>
+
+      <Suspense fallback={<ServicesSkeleton />}>
+        <OnlineStoreShowcase />
       </Suspense>
       
       <Suspense fallback={<ServicesSkeleton />}>
