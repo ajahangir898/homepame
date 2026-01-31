@@ -1,4 +1,45 @@
 {
-  "nodes": [],
-  "edges": []
+  "nodes": [
+    {
+      "id": "src/screens/FrameScreen/FrameScreen.jsx",
+      "label": "FrameScreen",
+      "routes": [
+        "/"
+      ],
+      "type": "screen",
+      "isRoot": true
+    },
+    {
+      "id": "src/screens/PaymentScreen/PaymentScreen.jsx",
+      "label": "PaymentScreen",
+      "routes": [
+        "/payment"
+      ],
+      "type": "screen"
+    },
+    {
+      "id": "src/screens/FrameScreen/sections/Pricing/Pricing.jsx",
+      "label": "Pricing",
+      "routes": [],
+      "type": "component"
+    }
+  ],
+  "edges": [
+    {
+      "id": "src\\screens\\FrameScreen\\sections\\Pricing\\Pricing.jsx:99:4-to-src\\screens\\PaymentScreen\\PaymentScreen.jsx",
+      "source": "src\\screens\\FrameScreen\\sections\\Pricing\\Pricing.jsx",
+      "target": "src\\screens\\PaymentScreen\\PaymentScreen.jsx",
+      "data": {
+        "viaRoute": "/payment",
+        "trigger": {
+          "element": "navigate(\"/payment\", { state: { plan } })",
+          "line": 99,
+          "endLine": 99,
+          "column": 4,
+          "endColumn": 45,
+          "sourceFile": "src\\screens\\FrameScreen\\sections\\Pricing\\Pricing.jsx"
+        }
+      }
+    }
+  ]
 }
